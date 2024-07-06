@@ -52,7 +52,7 @@ img#logo {
 }
 
 div#logo {
-    display: block;
-    width: 100%;
-    min-width: 100% !important;
+    position:absolute;
+    left:0;
+    width:100%;
 }

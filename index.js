@@ -29,26 +29,26 @@ function getSourceValue(source) {
 
 function getSourceLabel(source) {
     switch (source) {
-        case 'Pool 1':
-            return 1;
-        case 'Pool 2':
-            return 2;
-        case 'Pool 3':
-            return 3;
-        case 'Pool 4':
-            return 4;
-        case 'Pool 5':
-            return 5;
-        case 'Level 1-14':
-            return 0;
+        case 'Pool 1 (Collection Level 18-214)':
+            return 'Pool 1';
+        case 'Pool 2 (Collection Level 222-486)':
+            return 'Pool 2';
+        case 'Pool 3 (Collection Level 486-?)':
+            return 'Pool 3';
+        case 'Pool 4 (Series 4)':
+            return 'Pool 4';
+        case 'Pool 5 (Series 5)':
+            return 'Pool 5';
+        case 'Collection Level 1-14':
+            return 'Level 1-14';
         case 'Starter Card':
-            return -1;
-        case 'Recruit':
-            return -2;
+            return 'Starter Card';
+        case 'Recruit Season':
+            return 'Recruit Season';
         case 'None':
-            return 5;
+            return '';
         default:
-            return 0;
+            return '';
     }
 }
 
