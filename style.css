@@ -82,8 +82,8 @@ div#rankGraph {
 
 div#rankGraph .container {
     width: 80%;
-    min-width: 300px;
-    min-height: 200px;
+    min-width: 400px;
+    min-height: 300px;
     background: #443C82;
     align-self: center;
     justify-content: center;
