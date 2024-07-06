@@ -77,12 +77,12 @@ div#rankGraph {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 div#rankGraph .container {
     width: 80%;
     min-width: 400px;
-    min-height: 400px;
     background: #443C82;
     align-self: center;
     justify-self: center;
