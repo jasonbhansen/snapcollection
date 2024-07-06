@@ -18,19 +18,19 @@ layout: default
 </head>
 
 <body>
-    <div id="logo"><img id="logo" src="logo.png" /></div>
+    <div id="logo" class="flex-item"><img id="logo" src="logo.png" /></div>
 
-    <div id="rankGraph">
+    <div id="rankGraph"  class="flex-item">
         <div class="container"><canvas id="rankGamesChart" width="800" height="400"></canvas></div>
     </div>
 
 
 
-    <div class="search-container">
+    <div class="search-container flex-tiem">
         <i class="fas fa-search search-icon"></i>
         <input type="text" id="searchInput" placeholder="">
     </div>
-    <div id="cards"></div>
+    <div id="cards"  class="flex-item"></div>
     <script src="./tools/cards.js?{{ site.github.build_revision }}"></script>
     <script src="./tools/me.js?{{ site.github.build_revision }}"></script>
     <script src="index.js?{{ site.github.build_revision }}"></script>

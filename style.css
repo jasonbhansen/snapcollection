@@ -6,8 +6,15 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    flex-wrap:wrap;
 }
+
+@media (max-width: 800px) {
+    .flex-item {
+      flex: 100%;
+    }
+  } 
+
 
 table {
     width: 80%;
