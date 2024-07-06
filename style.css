@@ -45,3 +45,11 @@ td {
 tr:hover {
     background-color: #473A7B;
 }
+
+div.logo {
+    width: 100%;
+}
+
+img.logo {
+    height: 125px;
+}
