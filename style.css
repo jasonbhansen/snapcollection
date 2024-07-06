@@ -54,3 +54,7 @@ div.logo {
 img.logo {
     height: 125px;
 }
+
+div.cards {
+    width: 100%;
+}
