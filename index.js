@@ -186,8 +186,7 @@ for (const [key, value] of collection) {
 
 const table = createTable(owned_cards);
 document.getElementById('cards').appendChild(table);
-var data = j.rankhistory.reverse()
-data = data.splice[45];
+data = data.filter((e,i) => i > data.size - 45);
 const labels = data.map(d => new Date(d.date * 1000).toLocaleDateString());
 const rankData = data.map(d => d.Rank);
 const gamesPlayedData = data.map(d => d.GamesPlayedInSeason);
