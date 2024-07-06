@@ -128,7 +128,7 @@ for (const [key, value] of Object.entries(j.collection)) {
         cost: cards[key.toLowerCase()].cost,
         power: cards[key.toLowerCase()].power,
         description: cards[key.toLowerCase()].description,
-        dateStr: new Date().toUTCString().replace(",", ""),
+        dateStr: new Date().toLocaleTimeString(),
         date: Math.trunc(new Date().getTime() / 1000),
         updated: false
     })
@@ -143,7 +143,7 @@ for (const [key, value] of Object.entries(j.collectionhist)) {
         cost: cards[key.toLowerCase()].cost,
         power: cards[key.toLowerCase()].power,
         description: cards[key.toLowerCase()].description,
-        dateStr: d.toUTCString().replace(",", ""),
+        dateStr: d.toLocaleTimeString(),
         date: Math.trunc(d / 1000),
         updated: true
     }
