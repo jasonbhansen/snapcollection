@@ -75,6 +75,8 @@ div#rankGraph {
 
 div#rankGraph .container {
     width: 80%;
+    min-width: 800px;
+    min-height: 400px;
     background: #443C82;
     align-self: center;
 }
