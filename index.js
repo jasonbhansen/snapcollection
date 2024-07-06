@@ -215,6 +215,7 @@ const chart = new Chart(ctx, {
         }]
     },
     options: {
+        devicePixelRatio: 4,
         scales: {
             x: {
                 beginAtZero: true,

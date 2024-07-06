@@ -76,12 +76,14 @@ div#rankGraph .container {
     width: 800px;
     height: 400px;
     background: #443C82;
+    align-self: center;
 }
 
 .search-container {
     position: relative;
     width: 40%;
     margin-bottom: 20px;
+    
 }
 
 input[type="text"] {
@@ -92,6 +94,7 @@ input[type="text"] {
     font-size: 1em;
     background-color: #B0A4E3;
     color: #2E2965;
+    align-self: center;
 }
 
 .search-icon {
