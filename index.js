@@ -1,4 +1,4 @@
-const headers = ['Name', 'Date', 'Source', 'Updated'];
+const headers = ['Name', 'Date', 'Source'];
 
 function createTable(cards) {
     const table = document.createElement('table');
