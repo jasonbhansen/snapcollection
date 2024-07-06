@@ -203,7 +203,7 @@ const chart = new Chart(ctx, {
             borderColor: '#FFD700',
             backgroundColor: 'rgba(255, 215, 0, 0.2)',
             borderWidth: 2,
-            pointRadius: 3,
+            pointRadius: 1,
             yAxisID: 'y-axis-rank'
         }, {
             type: 'bar',
