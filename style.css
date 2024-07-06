@@ -65,6 +65,17 @@ div#logo {
     margin-bottom: 15px;
 }
 
+div#rankGraph {
+    width:100% !important;
+    display: flex;
+    justify-content: center
+}
+
+div#rankGraph canvas {
+    width: 800px;
+    height: 400px;
+}
+
 .search-container {
     position: relative;
     width: 40%;
