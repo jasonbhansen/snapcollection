@@ -1,3 +1,11 @@
+body {
+    background-color: #604DA7;
+}
+
+img.logo {
+    height: 125px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
