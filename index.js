@@ -106,6 +106,7 @@ for (const [key, value] of Object.entries(j.collectionhist)) {
         name: cards[key.toLowerCase()].name,
         source: cards[key.toLowerCase()].source,
         cost: cards[key.toLowerCase()].cost,
+        power: cards[key.toLowerCase()].power,
         dateStr: d.toUTCString().replace(",", ""),
         date: Math.trunc(d / 1000),
         updated: true
@@ -119,6 +120,8 @@ for (const [key, value] of collection) {
         name: value.name,
         dateStr: value.dateStr,
         date: value.date,
+        cost: value.cost,
+        power: value.power,
         source: value.source,
         updated: value.updated
     })
