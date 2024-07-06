@@ -68,10 +68,11 @@ div#logo {
 div#rankGraph {
     width:100% !important;
     display: flex;
-    justify-content: center
+    justify-content: center;
+    margin-bottom: 15px;
 }
 
-div#rankGraph canvas {
+div#rankGraph .container {
     width: 800px;
     height: 400px;
 }
