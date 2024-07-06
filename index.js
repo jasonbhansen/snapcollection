@@ -190,6 +190,7 @@ const rankData = data.map(d => d.Rank);
 const gamesPlayedData = data.map(d => d.GamesPlayedInSeason);
 
 // Create the chart
+
 const ctx = document.getElementById('rankGamesChart').getContext('2d');
 const chart = new Chart(ctx, {
     type: 'bar',
@@ -201,41 +202,25 @@ const chart = new Chart(ctx, {
             data: rankData,
             borderColor: '#FFD700',
             backgroundColor: 'rgba(255, 215, 0, 0.2)',
-            yAxisID: 'y-axis-rank',
-            pointRadius: 5,
-            pointHoverRadius: 7,
-            pointBackgroundColor: '#FFD700'
+            borderWidth: 2,
+            pointRadius: 3,
+            yAxisID: 'y-axis-rank'
         }, {
             type: 'bar',
             label: 'Games Played In Season',
             data: gamesPlayedData,
-            backgroundColor: '#5A9BD4',
+            backgroundColor: '#1E90FF',
+            borderWidth: 1,
             yAxisID: 'y-axis-games'
         }]
     },
     options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-            legend: {
-                labels: {
-                    font: {
-                        size: 14
-                    },
-                    color: '#FFFFFF'
-                }
-            },
-            tooltip: {
-                bodyFont: {
-                    size: 14
-                }
-            }
-        },
         scales: {
             x: {
+                beginAtZero: true,
                 ticks: {
                     font: {
-                        size: 12
+                        size: 14
                     },
                     color: '#FFFFFF'
                 }
@@ -244,44 +229,48 @@ const chart = new Chart(ctx, {
                 type: 'linear',
                 position: 'left',
                 beginAtZero: true,
-                title: {
-                    display: true,
-                    text: 'Rank',
+                ticks: {
                     font: {
                         size: 14
                     },
                     color: '#FFFFFF'
                 },
-                ticks: {
+                title: {
+                    display: true,
+                    text: 'Rank',
                     font: {
-                        size: 12
+                        size: 16
                     },
                     color: '#FFFFFF'
-                },
-                grid: {
-                    color: 'rgba(255, 255, 255, 0.2)'
                 }
             },
             'y-axis-games': {
                 type: 'linear',
                 position: 'right',
                 beginAtZero: true,
-                title: {
-                    display: true,
-                    text: 'Games Played In Season',
+                ticks: {
                     font: {
                         size: 14
                     },
                     color: '#FFFFFF'
                 },
-                ticks: {
+                title: {
+                    display: true,
+                    text: 'Games Played In Season',
                     font: {
-                        size: 12
+                        size: 16
                     },
                     color: '#FFFFFF'
-                },
-                grid: {
-                    color: 'rgba(255, 255, 255, 0.2)'
+                }
+            }
+        },
+        plugins: {
+            legend: {
+                labels: {
+                    font: {
+                        size: 16
+                    },
+                    color: '#FFFFFF'
                 }
             }
         }
