@@ -223,6 +223,8 @@ const chart = new Chart(ctx, {
     options: {
         animation: false,
         scales: {
+            maintainAspectRatio: false,
+            responsive: true,
             x: {
                 beginAtZero: true,
                 ticks: {
