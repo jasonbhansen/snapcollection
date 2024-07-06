@@ -1,4 +1,4 @@
-const headers = ['Name', 'DateStr', 'Source', 'Updated'];
+const headers = ['Name', 'Date', 'Source', 'Updated'];
 
 function createTable(cards) {
     const table = document.createElement('table');
@@ -21,7 +21,7 @@ function createTable(cards) {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${card.name}</td>
-            <td>${card.dateStr}</td>
+            <td>${card.date}</td>
             <td>${card.source}</td>
             <td>${card.updated}</td>
         `;
