@@ -23,7 +23,6 @@ function createTable(cards) {
             <td>${card.name}</td>
             <td>${card.date}</td>
             <td>${card.source}</td>
-            <td>${card.updated}</td>
         `;
         tbody.appendChild(row);
     });
