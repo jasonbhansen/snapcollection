@@ -127,7 +127,7 @@ function filterTable() {
     for (let i = 1; i < rows.length; i++) {
         const cells = rows[i].getElementsByTagName('td');
         const nameCell = cells[0];
-        const descriptionCell = cells[1];
+        const descriptionCell = cells[3];
         if (nameCell && descriptionCell) {
             const nameValue = (nameCell.textContent || nameCell.innerText).toLowerCase();
             const descriptionValue = (descriptionCell.textContent || descriptionCell.innerText).toLowerCase();
