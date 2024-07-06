@@ -71,9 +71,12 @@ function sortTable(table, key, ascending) {
     let compare;
 
      if (key === 'date' || key === "source") {
+        console.log("here")
         compare = (a, b) => {
             const valA = parseInt(a.cells[1].getAttribute('value'));
             const valB = parseInt(b.cells[1].getAttribute('value'));
+            console.log(valA)
+            console.log(valB)
             return ascending ? valA - valB : valB - valA;
         };
     } else {
