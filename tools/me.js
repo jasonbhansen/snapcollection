@@ -272,6 +272,12 @@ const j = {
             "ArtVariantDefId": "",
             "Split": "1"
         },
+        "Ronan": {
+            "rarity": "UltraLegendary",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "Ronan_04",
+            "Split": "0"
+        },
         "Ironheart": {
             "rarity": "UltraLegendary",
             "SurfaceEffectDefId": "",
@@ -312,12 +318,6 @@ const j = {
             "rarity": "UltraLegendary",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "Psylocke_11",
-            "Split": "0"
-        },
-        "Ronan": {
-            "rarity": "Legendary",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "Ronan_04",
             "Split": "0"
         },
         "Sera": {
@@ -1124,6 +1124,18 @@ const j = {
             "ArtVariantDefId": "SpiderMan2099_03",
             "Split": "0"
         },
+        "Arishem": {
+            "rarity": "Common",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "",
+            "Split": "0"
+        },
+        "LukeCage": {
+            "rarity": "Common",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "",
+            "Split": "0"
+        },
         "Crossbones": {
             "rarity": "Common",
             "SurfaceEffectDefId": "",
@@ -1278,6 +1290,15 @@ const j = {
             {
                 "date": "1718249169",
                 "rarity": "Legendary",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "Ronan_04",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "00bcc935-c656-4b45-8360-0cfe047cb3a0"
+            },
+            {
+                "date": "1720295163",
+                "rarity": "UltraLegendary",
                 "SurfaceEffectDefId": "",
                 "ArtVariantDefId": "Ronan_04",
                 "Split": "0",
@@ -7049,6 +7070,11 @@ const j = {
             "date": "1720224000",
             "Rank": "80",
             "GamesPlayedInSeason": "305"
+        },
+        {
+            "date": "1720278000",
+            "Rank": "80",
+            "GamesPlayedInSeason": "307"
         }
     ],
     "colrankhistory": []
