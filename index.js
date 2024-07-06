@@ -201,19 +201,44 @@ const chart = new Chart(ctx, {
             data: rankData,
             borderColor: '#FFD700',
             backgroundColor: 'rgba(255, 215, 0, 0.2)',
-            yAxisID: 'y-axis-rank'
+            yAxisID: 'y-axis-rank',
+            pointRadius: 5,
+            pointHoverRadius: 7,
+            pointBackgroundColor: '#FFD700'
         }, {
             type: 'bar',
             label: 'Games Played In Season',
             data: gamesPlayedData,
-            backgroundColor: '#443C82',
+            backgroundColor: '#5A9BD4',
             yAxisID: 'y-axis-games'
         }]
     },
     options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                labels: {
+                    font: {
+                        size: 14
+                    },
+                    color: '#FFFFFF'
+                }
+            },
+            tooltip: {
+                bodyFont: {
+                    size: 14
+                }
+            }
+        },
         scales: {
             x: {
-                beginAtZero: true
+                ticks: {
+                    font: {
+                        size: 12
+                    },
+                    color: '#FFFFFF'
+                }
             },
             'y-axis-rank': {
                 type: 'linear',
@@ -221,7 +246,20 @@ const chart = new Chart(ctx, {
                 beginAtZero: true,
                 title: {
                     display: true,
-                    text: 'Rank'
+                    text: 'Rank',
+                    font: {
+                        size: 14
+                    },
+                    color: '#FFFFFF'
+                },
+                ticks: {
+                    font: {
+                        size: 12
+                    },
+                    color: '#FFFFFF'
+                },
+                grid: {
+                    color: 'rgba(255, 255, 255, 0.2)'
                 }
             },
             'y-axis-games': {
@@ -230,7 +268,20 @@ const chart = new Chart(ctx, {
                 beginAtZero: true,
                 title: {
                     display: true,
-                    text: 'Games Played In Season'
+                    text: 'Games Played In Season',
+                    font: {
+                        size: 14
+                    },
+                    color: '#FFFFFF'
+                },
+                ticks: {
+                    font: {
+                        size: 12
+                    },
+                    color: '#FFFFFF'
+                },
+                grid: {
+                    color: 'rgba(255, 255, 255, 0.2)'
                 }
             }
         }
