@@ -84,7 +84,7 @@ input[type="text"] {
 .search-icon {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: -50px;
     transform: translateY(-50%);
     font-size: 1.2em;
     color: #2E2965;
