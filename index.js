@@ -54,7 +54,7 @@ function createTable(cards) {
             <td>${card.name}</td>
             <td>${card.cost}</td>
             <td>${card.power}</td>
-            <td>${cards[card.name.toLowerCase()].description}</td>
+            <td>${card.description}</td>
             <td value='${getSourceValue(card.source)}'>${card.source}</td>
             <td value='${card.date}'>${card.dateStr}</td>
 
@@ -102,6 +102,7 @@ for (const [key, value] of Object.entries(j.collection)) {
         source: cards[key.toLowerCase()].source,
         cost: cards[key.toLowerCase()].cost,
         power: cards[key.toLowerCase()].power,
+        description: cards[key.toLowerCase()].description,
         dateStr: new Date().toUTCString().replace(",", ""),
         date: Math.trunc(new Date().getTime() / 1000),
         updated: false
@@ -116,6 +117,7 @@ for (const [key, value] of Object.entries(j.collectionhist)) {
         source: cards[key.toLowerCase()].source,
         cost: cards[key.toLowerCase()].cost,
         power: cards[key.toLowerCase()].power,
+        description: cards[key.toLowerCase()].description,
         dateStr: d.toUTCString().replace(",", ""),
         date: Math.trunc(d / 1000),
         updated: true
@@ -131,6 +133,7 @@ for (const [key, value] of collection) {
         date: value.date,
         cost: value.cost,
         power: value.power,
+        description: value.description,
         source: value.source,
         updated: value.updated
     })
