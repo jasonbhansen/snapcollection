@@ -184,3 +184,55 @@ for (const [key, value] of collection) {
 
 const table = createTable(owned_cards);
 document.getElementById('cards').appendChild(table);
+var data = j.rankhistory
+const labels = data.map(d => new Date(d.date * 1000).toLocaleDateString());
+const rankData = data.map(d => d.Rank);
+const gamesPlayedData = data.map(d => d.GamesPlayedInSeason);
+
+// Create the chart
+const ctx = document.getElementById('rankGamesChart').getContext('2d');
+const chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: labels,
+        datasets: [{
+            type: 'line',
+            label: 'Rank',
+            data: rankData,
+            borderColor: '#FFD700',
+            backgroundColor: 'rgba(255, 215, 0, 0.2)',
+            yAxisID: 'y-axis-rank'
+        }, {
+            type: 'bar',
+            label: 'Games Played In Season',
+            data: gamesPlayedData,
+            backgroundColor: '#443C82',
+            yAxisID: 'y-axis-games'
+        }]
+    },
+    options: {
+        scales: {
+            x: {
+                beginAtZero: true
+            },
+            'y-axis-rank': {
+                type: 'linear',
+                position: 'left',
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Rank'
+                }
+            },
+            'y-axis-games': {
+                type: 'linear',
+                position: 'right',
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Games Played In Season'
+                }
+            }
+        }
+    }
+});

@@ -89,3 +89,8 @@ input[type="text"] {
     font-size: 1.2em;
     color: #2E2965;
 }
+
+canvas {
+    background: #443C82;
+    border-radius: 8px;
+}
