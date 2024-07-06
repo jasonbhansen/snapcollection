@@ -60673,5 +60673,3 @@ const cards = {
         "stats_cuberate_played": 0.14133333333333334
     }
 }
-
-module.exports = { cards }

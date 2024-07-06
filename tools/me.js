@@ -6965,4 +6965,3 @@ const j = {
     ],
     "colrankhistory": []
 }
-module.exports = { j }
