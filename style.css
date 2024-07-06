@@ -75,6 +75,7 @@ div#rankGraph {
 div#rankGraph .container {
     width: 800px;
     height: 400px;
+    background: #443C82;
 }
 
 .search-container {
@@ -102,7 +103,3 @@ input[type="text"] {
     color: #2E2965;
 }
 
-canvas {
-    background: #443C82;
-    border-radius: 8px;
-}
