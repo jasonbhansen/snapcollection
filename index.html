@@ -15,9 +15,9 @@
 <body>
     Test
     <div id="cards"></div>
-    <script src="{{ "/tools/cards.js" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
-    <script src="{{ "/tools/me.js" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
-    <script src="{{ "/index.js" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
+    <script src="./tools/cards.js?{{ site.github.build_revision }}"></script>
+    <script src="./tools/me.js?{{ site.github.build_revision }}"></script>
+    <script src="index.js?{{ site.github.build_revision }}"></script>
 </body>
 
 </html>
