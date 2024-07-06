@@ -70,19 +70,13 @@ function sortTable(table, key, ascending) {
     const rows = Array.from(tbody.rows);
     let compare;
 
-    if (key === 'updated') {
-        compare = (a, b) => {
-            const valA = key === 'date' ? new Date(a.cells[1].innerText) : a.cells[3].innerText === 'true';
-            const valB = key === 'date' ? new Date(b.cells[1].innerText) : b.cells[3].innerText === 'true';
-            return ascending ? valA - valB : valB - valA;
-        };
-    } else if (key === 'date' || key === "source") {
+     if (key === 'date' || key === "source") {
         compare = (a, b) => {
             const valA = parseInt(a.cells[1].getAttribute('value'));
             const valB = parseInt(b.cells[1].getAttribute('value'));
-            return ascending ? valA.localeCompare(valB) : valB.localeCompare(valA);
+            return ascending ? valA - valB : valB - valA;
         };
-    }else {
+    } else {
         compare = (a, b) => {
             const valA = a.cells[headers.indexOf(key.charAt(0).toUpperCase() + key.slice(1))].innerText;
             const valB = b.cells[headers.indexOf(key.charAt(0).toUpperCase() + key.slice(1))].innerText;
