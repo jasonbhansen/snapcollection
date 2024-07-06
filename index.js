@@ -127,11 +127,11 @@ function filterTable() {
     for (let i = 1; i < rows.length; i++) {
         const cells = rows[i].getElementsByTagName('td');
         const nameCell = cells[0];
-        const descriptionCell = cells[3];
+        const descriptionCell = cells[1];
         if (nameCell && descriptionCell) {
-            const nameValue = nameCell.textContent || nameCell.innerText;
-            const descriptionValue = descriptionCell.textContent || descriptionCell.innerText;
-            rows[i].style.display = nameValue.toLowerCase().indexOf(filter) > -1 || descriptionValue.toLowerCase().indexOf(filter) > -1 ? '' : 'none';
+            const nameValue = (nameCell.textContent || nameCell.innerText).toLowerCase();
+            const descriptionValue = (descriptionCell.textContent || descriptionCell.innerText).toLowerCase();
+            rows[i].style.display = nameValue.indexOf(filter) > -1 || descriptionValue.indexOf(filter) > -1 ? '' : 'none';
         }
     }
 }
