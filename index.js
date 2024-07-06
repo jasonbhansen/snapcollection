@@ -126,9 +126,11 @@ function filterTable() {
     for (let i = 1; i < rows.length; i++) {
         const cells = rows[i].getElementsByTagName('td');
         const nameCell = cells[0];
-        if (nameCell) {
+        const descriptionCell = cells[3];
+        if (nameCell && descriptionCell) {
             const nameValue = nameCell.textContent || nameCell.innerText;
-            rows[i].style.display = nameValue.toLowerCase().indexOf(filter) > -1 ? '' : 'none';
+            const descriptionValue = descriptionCell.textContent || descriptionCell.innerText;
+            rows[i].style.display = nameValue.toLowerCase().indexOf(filter) > -1 || descriptionValue.toLowerCase().indexOf(filter) > -1 ? '' : 'none';
         }
     }
 }
