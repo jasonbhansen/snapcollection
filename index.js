@@ -1,4 +1,4 @@
-const headers = ['Name','Cost','Power','Source', 'Date'];
+const headers = ['Name','Cost','Power','Description','Source', 'Date'];
 
 let sortOrder = {};
 
@@ -54,6 +54,7 @@ function createTable(cards) {
             <td>${card.name}</td>
             <td>${card.cost}</td>
             <td>${card.power}</td>
+            <td>${cards[key.toLowerCase()].description}</td>
             <td value='${getSourceValue(card.source)}'>${card.source}</td>
             <td value='${card.date}'>${card.dateStr}</td>
 
@@ -73,8 +74,8 @@ function sortTable(table, key, ascending) {
      if (key === 'date' || key === "source") {
         console.log("here")
         compare = (a, b) => {
-            const valA = parseInt(a.cells[1].getAttribute('value'));
-            const valB = parseInt(b.cells[1].getAttribute('value'));
+            const valA = parseInt(a.cells[headers.indexOf(key.charAt(0).toUpperCase() + key.slice(1))].getAttribute('value'));
+            const valB = parseInt(b.cells[headers.indexOf(key.charAt(0).toUpperCase() + key.slice(1))].getAttribute('value'));
             console.log(valA)
             console.log(valB)
             return ascending ? valA - valB : valB - valA;
