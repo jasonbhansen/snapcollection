@@ -76,9 +76,7 @@ div#rankGraph {
     width:100% !important; 
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;    
     align-items: center;
-    border: 1px black;
 }
 
 div#rankGraph .container {
@@ -86,6 +84,8 @@ div#rankGraph .container {
     min-width: 400px;
     min-height: 400px;
     background: #443C82;
+    align-self: center;
+    justify-self: center;
 }
 
 .search-container {
