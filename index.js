@@ -117,7 +117,24 @@ function sortTable(table, key, ascending) {
     rows.forEach(row => tbody.appendChild(row));
 }
 
-console.log(Object.keys(j.collectionhist).length)
+function filterTable() {
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
+    const table = document.querySelector('table');
+    const rows = table.getElementsByTagName('tr');
+
+    for (let i = 1; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName('td');
+        const nameCell = cells[0];
+        if (nameCell) {
+            const nameValue = nameCell.textContent || nameCell.innerText;
+            rows[i].style.display = nameValue.toLowerCase().indexOf(filter) > -1 ? '' : 'none';
+        }
+    }
+}
+
+document.getElementById('searchInput').addEventListener('keyup', filterTable);
+
 
 var collection = new Map();
 

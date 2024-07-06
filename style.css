@@ -64,3 +64,12 @@ div#logo {
     text-align: center;
     margin-bottom: 15px;
 }
+
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 80%;
+}
