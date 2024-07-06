@@ -54,7 +54,7 @@ function createTable(cards) {
             <td>${card.name}</td>
             <td>${card.cost}</td>
             <td>${card.power}</td>
-            <td>${cards[key.toLowerCase()].description}</td>
+            <td>${cards[card.name.toLowerCase()].description}</td>
             <td value='${getSourceValue(card.source)}'>${card.source}</td>
             <td value='${card.date}'>${card.dateStr}</td>
 
