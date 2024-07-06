@@ -46,15 +46,12 @@ tr:hover {
     background-color: #473A7B;
 }
 
-div.logo {
+div#logo {
     width: 100%;
     height: 125px;
 }
 
-img.logo {
+img#logo {
     height: 125px;
 }
 
-div.cards {
-    width: 100%;
-}
