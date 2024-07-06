@@ -1,6 +1,3 @@
-const { cards } = require("./tools/cards")
-const { j } = require("./tools/me")
-
 
 function createTable(cards) {
     const table = document.createElement('table');
