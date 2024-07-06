@@ -53,4 +53,5 @@ img#logo {
 
 div#logo {
     width:100% !important;
+    align-items: center;
 }
