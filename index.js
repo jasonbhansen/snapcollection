@@ -186,7 +186,8 @@ for (const [key, value] of collection) {
 
 const table = createTable(owned_cards);
 document.getElementById('cards').appendChild(table);
-data = data.filter((e,i) => i > data.size - 45);
+var data = j.rankhistory;
+data = data.filter((e,i) => i % 2 == 0);
 const labels = data.map(d => new Date(d.date * 1000).toLocaleDateString());
 const rankData = data.map(d => d.Rank);
 const gamesPlayedData = data.map(d => d.GamesPlayedInSeason);
