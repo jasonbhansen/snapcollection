@@ -1,5 +1,7 @@
 const headers = ['Name','Cost','Power','Source', 'Date'];
 
+let sortOrder = {};
+
 function getSourceValue(source) {
     switch (source) {
         case 'Pool 1 (Collection Level 18-214)':
@@ -35,7 +37,11 @@ function createTable(cards) {
     headers.forEach(header => {
         const th = document.createElement('th');
         th.innerText = header;
-        th.onclick = () => sortTable(table, header.toLowerCase());
+        th.onclick = () => {
+            const key = header.toLowerCase();
+            sortOrder[key] = !sortOrder[key]; // Toggle the sort order
+            sortTable(table, key, sortOrder[key]);
+        };
         headerRow.appendChild(th);
     });
 
@@ -59,7 +65,7 @@ function createTable(cards) {
     return table;
 }
 
-function sortTable(table, key) {
+function sortTable(table, key, ascending) {
     const tbody = table.tBodies[0];
     const rows = Array.from(tbody.rows);
     let compare;
@@ -68,16 +74,20 @@ function sortTable(table, key) {
         compare = (a, b) => {
             const valA = key === 'date' ? new Date(a.cells[1].innerText) : a.cells[3].innerText === 'true';
             const valB = key === 'date' ? new Date(b.cells[1].innerText) : b.cells[3].innerText === 'true';
-            return valA > valB ? 1 : -1;
+            return ascending ? valA - valB : valB - valA;
         };
     } else if (key === 'date' || key === "source") {
         compare = (a, b) => {
             const valA = parseInt(a.cells[1].getAttribute('value'));
             const valB = parseInt(b.cells[1].getAttribute('value'));
-            return valA > valB ? 1 : -1;
+            return ascending ? valA.localeCompare(valB) : valB.localeCompare(valA);
         };
     }else {
-        compare = (a, b) => a.cells[headers.indexOf(key.charAt(0).toUpperCase() + key.slice(1))].innerText.localeCompare(b.cells[headers.indexOf(key.charAt(0).toUpperCase() + key.slice(1))].innerText);
+        compare = (a, b) => {
+            const valA = a.cells[headers.indexOf(key.charAt(0).toUpperCase() + key.slice(1))].innerText;
+            const valB = b.cells[headers.indexOf(key.charAt(0).toUpperCase() + key.slice(1))].innerText;
+            return ascending ? valA.localeCompare(valB) : valB.localeCompare(valA);
+        };
     }
 
     rows.sort(compare);
