@@ -88,6 +88,7 @@ function createTable(cards) {
     });
 
     table.appendChild(tbody);
+    sortTable(table,"Name",true);
     return table;
 }
 
@@ -185,6 +186,8 @@ for (const [key, value] of collection) {
 }
 
 const table = createTable(owned_cards);
+
+
 document.getElementById('cards').appendChild(table);
 var data = j.rankhistory;
 data = data.filter((e,i) => i % 2 == 0);
@@ -218,7 +221,7 @@ const chart = new Chart(ctx, {
         }]
     },
     options: {
-        devicePixelRatio: 4,
+        animation: false,
         scales: {
             x: {
                 beginAtZero: true,
