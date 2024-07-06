@@ -1,10 +1,10 @@
+const headers = ['Name', 'DateStr', 'Source', 'Updated'];
 
 function createTable(cards) {
     const table = document.createElement('table');
     const thead = document.createElement('thead');
     const tbody = document.createElement('tbody');
 
-    const headers = ['Name', 'DateStr', 'Source', 'Updated'];
     const headerRow = document.createElement('tr');
     
     headers.forEach(header => {
