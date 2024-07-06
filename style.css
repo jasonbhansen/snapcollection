@@ -2,6 +2,7 @@ body {
     background-color: #604DA7;
     color: #FFFFFF;
     font-family: 'Arial', sans-serif;
+    display: flex;
     justify-content: center;
     align-items: center;
     
@@ -43,7 +44,6 @@ td {
 tr:hover {
     background-color: #473A7B;
 }
-
 
 
 img#logo {

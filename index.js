@@ -27,6 +27,31 @@ function getSourceValue(source) {
     }
 }
 
+function getSourceLabel(source) {
+    switch (source) {
+        case 'Pool 1':
+            return 1;
+        case 'Pool 2':
+            return 2;
+        case 'Pool 3':
+            return 3;
+        case 'Pool 4':
+            return 4;
+        case 'Pool 5':
+            return 5;
+        case 'Level 1-14':
+            return 0;
+        case 'Starter Card':
+            return -1;
+        case 'Recruit':
+            return -2;
+        case 'None':
+            return 5;
+        default:
+            return 0;
+    }
+}
+
 function createTable(cards) {
     const table = document.createElement('table');
     const thead = document.createElement('thead');
@@ -55,7 +80,7 @@ function createTable(cards) {
             <td>${card.cost}</td>
             <td>${card.power}</td>
             <td>${card.description}</td>
-            <td value='${getSourceValue(card.source)}'>${card.source}</td>
+            <td value='${getSourceValue(card.source)}'>${getSourceLabel(card.source)}</td>
             <td value='${card.date}'>${card.dateStr}</td>
 
         `;
