@@ -69,7 +69,8 @@ div#rankGraph {
     width:100% !important; 
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    padding: 10px 40px 10px 20px;
 }
 
 div#rankGraph .container {
