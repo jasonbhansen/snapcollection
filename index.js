@@ -1,4 +1,4 @@
-const headers = ['Name', 'Date','Cost','Power','Source'];
+const headers = ['Name','Cost','Power','Source', 'Date'];
 
 function getSourceValue(source) {
     switch (source) {
@@ -46,10 +46,11 @@ function createTable(cards) {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${card.name}</td>
-            <td value='${card.date}'>${card.dateStr}</td>
             <td>${card.cost}</td>
             <td>${card.power}</td>
-            <td value='${getSourceValue(card.source)}>${card.source}</td>
+            <td value='${getSourceValue(card.source)}'>${card.source}</td>
+            <td value='${card.date}'>${card.dateStr}</td>
+
         `;
         tbody.appendChild(row);
     });
