@@ -1,4 +1,29 @@
-const headers = ['Name', 'Date', 'Source'];
+const headers = ['Name', 'Date','Cost','Power','Source'];
+
+function getSourceValue(source) {
+    switch (source) {
+        case 'Pool 1 (Collection Level 18-214)':
+            return 1;
+        case 'Pool 2 (Collection Level 222-486)':
+            return 2;
+        case 'Pool 3 (Collection Level 486-?)':
+            return 3;
+        case 'Pool 4 (Series 4)':
+            return 4;
+        case 'Pool 5 (Series 5)':
+            return 5;
+        case 'Collection Level 1-14':
+            return 0;
+        case 'Starter Card':
+            return -1;
+        case 'Recruit Season':
+            return -2;
+        case 'None':
+            return 5;
+        default:
+            return 0;
+    }
+}
 
 function createTable(cards) {
     const table = document.createElement('table');
@@ -21,8 +46,10 @@ function createTable(cards) {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${card.name}</td>
-            <td>${card.date}</td>
-            <td>${card.source}</td>
+            <td value='${card.date}'>${card.dateStr}</td>
+            <td>${card.cost}</td>
+            <td>${card.power}</td>
+            <td value='${getSourceValue(card.source)}>${card.source}</td>
         `;
         tbody.appendChild(row);
     });
@@ -36,13 +63,19 @@ function sortTable(table, key) {
     const rows = Array.from(tbody.rows);
     let compare;
 
-    if (key === 'date' || key === 'updated') {
+    if (key === 'updated') {
         compare = (a, b) => {
             const valA = key === 'date' ? new Date(a.cells[1].innerText) : a.cells[3].innerText === 'true';
             const valB = key === 'date' ? new Date(b.cells[1].innerText) : b.cells[3].innerText === 'true';
             return valA > valB ? 1 : -1;
         };
-    } else {
+    } else if (key === 'date' || key === "source") {
+        compare = (a, b) => {
+            const valA = parseInt(a.cells[1].getAttribute('value'));
+            const valB = parseInt(b.cells[1].getAttribute('value'));
+            return valA > valB ? 1 : -1;
+        };
+    }else {
         compare = (a, b) => a.cells[headers.indexOf(key.charAt(0).toUpperCase() + key.slice(1))].innerText.localeCompare(b.cells[headers.indexOf(key.charAt(0).toUpperCase() + key.slice(1))].innerText);
     }
 
@@ -58,6 +91,8 @@ for (const [key, value] of Object.entries(j.collection)) {
     collection.set(key, {
         name: cards[key.toLowerCase()].name,
         source: cards[key.toLowerCase()].source,
+        cost: cards[key.toLowerCase()].cost,
+        power: cards[key.toLowerCase()].power,
         dateStr: new Date().toUTCString().replace(",", ""),
         date: Math.trunc(new Date().getTime() / 1000),
         updated: false
@@ -70,6 +105,7 @@ for (const [key, value] of Object.entries(j.collectionhist)) {
     collection.set(key, {
         name: cards[key.toLowerCase()].name,
         source: cards[key.toLowerCase()].source,
+        cost: cards[key.toLowerCase()].cost,
         dateStr: d.toUTCString().replace(",", ""),
         date: Math.trunc(d / 1000),
         updated: true
@@ -87,7 +123,6 @@ for (const [key, value] of collection) {
         updated: value.updated
     })
 
-    console.log(`${value.name},${value.dateStr},${value.date},${value.source},${value.updated}`);
 }
 
 const table = createTable(owned_cards);
