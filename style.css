@@ -2,11 +2,9 @@ body {
     background-color: #604DA7;
     color: #FFFFFF;
     font-family: 'Arial', sans-serif;
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    
 }
 
 table {
@@ -46,10 +44,7 @@ tr:hover {
     background-color: #473A7B;
 }
 
-div#logo {
-    width: 100%;
-    height: 125px;
-}
+
 
 img#logo {
     height: 250px;
