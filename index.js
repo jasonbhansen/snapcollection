@@ -136,6 +136,15 @@ function filterTable() {
     }
 }
 
+function adjustChartWidth() {
+    const table = document.querySelector('table');
+    const chartContainer = document.getElementById('chart-container');
+    chartContainer.style.width = `${table.offsetWidth}px`;
+}
+
+window.addEventListener('resize', adjustChartWidth);
+window.addEventListener('load', adjustChartWidth);
+
 document.getElementById('searchInput').addEventListener('keyup', filterTable);
 
 
