@@ -788,6 +788,12 @@ const j = {
             "ArtVariantDefId": "",
             "Split": "0"
         },
+        "SilverSurfer": {
+            "rarity": "Rare",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "SilverSurfer_05",
+            "Split": "0"
+        },
         "Stegron": {
             "rarity": "Rare",
             "SurfaceEffectDefId": "",
@@ -798,12 +804,6 @@ const j = {
             "rarity": "Rare",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "Colossus_06",
-            "Split": "0"
-        },
-        "SilverSurfer": {
-            "rarity": "Rare",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "",
             "Split": "0"
         },
         "Modok": {
@@ -1028,6 +1028,12 @@ const j = {
             "ArtVariantDefId": "",
             "Split": "0"
         },
+        "Viper": {
+            "rarity": "Uncommon",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "Viper_05",
+            "Split": "0"
+        },
         "Ghost": {
             "rarity": "Uncommon",
             "SurfaceEffectDefId": "",
@@ -1124,12 +1130,6 @@ const j = {
             "ArtVariantDefId": "",
             "Split": "0"
         },
-        "Viper": {
-            "rarity": "Common",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "",
-            "Split": "0"
-        },
         "AdamWarlock": {
             "rarity": "Common",
             "SurfaceEffectDefId": "",
@@ -1140,6 +1140,12 @@ const j = {
             "rarity": "Common",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "SpiderMan2099_03",
+            "Split": "0"
+        },
+        "Echo": {
+            "rarity": "Common",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "",
             "Split": "0"
         },
         "Crossbones": {
@@ -1847,6 +1853,15 @@ const j = {
             {
                 "date": "1720217595",
                 "rarity": "Uncommon",
+                "SurfaceEffectDefId": "PrismFoil",
+                "ArtVariantDefId": "",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "4db38088-1dda-419f-a174-0f881e042168"
+            },
+            {
+                "date": "1720220452",
+                "rarity": "Rare",
                 "SurfaceEffectDefId": "PrismFoil",
                 "ArtVariantDefId": "",
                 "Split": "0",
@@ -5516,6 +5531,15 @@ const j = {
                 "cardID": "83383bcc-a57c-48dc-8f28-5c7fe6e0add0"
             },
             {
+                "date": "1720319170",
+                "rarity": "Rare",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "SilverSurfer_05",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "83383bcc-a57c-48dc-8f28-5c7fe6e0add0"
+            },
+            {
                 "date": "1714849311",
                 "rarity": "Uncommon",
                 "SurfaceEffectDefId": "",
@@ -5570,6 +5594,17 @@ const j = {
                 "Split": "1",
                 "rewardLevel": "0",
                 "cardID": "fcbb2485-d3ab-4de9-8f52-16edabddb221"
+            }
+        ],
+        "Viper": [
+            {
+                "date": "1720295375",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "Viper_05",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "83d41c5f-ad08-4cce-95f7-d03ff4b7d0af"
             }
         ],
         "MistyKnight": [
@@ -5722,6 +5757,15 @@ const j = {
                 "Split": "0",
                 "rewardLevel": "0",
                 "cardID": "c1c4b23a-a018-4992-96af-24f4d0ee3073"
+            },
+            {
+                "date": "1720295258",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "ProfessorX_06",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "d42953f5-5721-4829-89c7-7c084eb7bfe1"
             },
             {
                 "date": "1714236377",
@@ -7183,6 +7227,11 @@ const j = {
             "date": "1720321200",
             "Rank": "82",
             "GamesPlayedInSeason": "335"
+        },
+        {
+            "date": "1720382400",
+            "Rank": "82",
+            "GamesPlayedInSeason": "337"
         }
     ],
     "colrankhistory": []
