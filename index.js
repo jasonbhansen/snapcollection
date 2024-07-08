@@ -181,10 +181,10 @@ for (const [key, value] of Object.entries(j.collectionhist)) {
     if(key === "Cerebro") {
         console.log(key)
         console.log(value)
-        console.log(findSmallestDate(value))
+        console.log(findSmallestDate(j.collectionhist[key]))
         }
     
-    var d = new Date(findSmallestDate(value) * 1000)
+    var d = new Date(findSmallestDate(j.collectionhist[key]) * 1000)
 
     collection.set(key, {
         name: cards[key.toLowerCase()].name,
