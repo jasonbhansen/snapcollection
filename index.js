@@ -158,6 +158,9 @@ document.getElementById('searchInput').addEventListener('keyup', filterTable);
 var collection = new Map();
 
 for (const [key, value] of Object.entries(j.collection)) {
+    console.log(key)
+    console.log(j.collectionhist[key])
+    console.log(findSmallestDate(j.collectionhist[key]))
     collection.set(key, {
         name: cards[key.toLowerCase()].name,
         source: cards[key.toLowerCase()].source,
@@ -171,6 +174,9 @@ for (const [key, value] of Object.entries(j.collection)) {
 }
 
 for (const [key, value] of Object.entries(j.collectionhist)) {
+    console.log(key)
+    console.log(value)
+    findSmallestDate(value)
     var d = new Date(findSmallestDate(value))
 
     collection.set(key, {
