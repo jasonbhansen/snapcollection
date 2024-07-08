@@ -161,14 +161,16 @@ for (const [key, value] of Object.entries(j.collection)) {
     console.log(key)
     console.log(j.collectionhist[key])
     console.log(findSmallestDate(j.collectionhist[key]))
+
+    var d = new Date(j.collectionhist[key] * 1000)
     collection.set(key, {
         name: cards[key.toLowerCase()].name,
         source: cards[key.toLowerCase()].source,
         cost: cards[key.toLowerCase()].cost,
         power: cards[key.toLowerCase()].power,
         description: cards[key.toLowerCase()].description,
-        dateStr: new Date().toLocaleDateString(),
-        date: Math.trunc(findSmallestDate(j.collectionhist[key])),
+        dateStr: d.toLocaleDateString(),
+        date: Math.trunc(d),
         updated: false
     })
 }
@@ -177,7 +179,7 @@ for (const [key, value] of Object.entries(j.collectionhist)) {
     console.log(key)
     console.log(value)
     findSmallestDate(value)
-    var d = new Date(findSmallestDate(value))
+    var d = new Date(findSmallestDate(value) * 1000)
 
     collection.set(key, {
         name: cards[key.toLowerCase()].name,
