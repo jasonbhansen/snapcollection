@@ -136,6 +136,13 @@ function filterTable() {
     }
 }
 
+function findSmallestDate(data) {
+    if (!data || data.length === 0) return null;
+    return data.reduce((smallest, current) => {
+        return current.date < smallest ? current.date : smallest;
+    }, data[0].date);
+}
+
 function adjustChartWidth() {
     const table = document.querySelector('table');
     const chartContainer = document.getElementById('chart-container');
@@ -158,13 +165,13 @@ for (const [key, value] of Object.entries(j.collection)) {
         power: cards[key.toLowerCase()].power,
         description: cards[key.toLowerCase()].description,
         dateStr: new Date().toLocaleDateString(),
-        date: Math.trunc(new Date().getTime() / 1000),
+        date: Math.trunc(findSmallestDate(j.collectionhist[key])),
         updated: false
     })
 }
 
 for (const [key, value] of Object.entries(j.collectionhist)) {
-    var d = new Date(value[0].date * 1000)
+    var d = new Date(findSmallestDate(value))
 
     collection.set(key, {
         name: cards[key.toLowerCase()].name,
@@ -173,7 +180,7 @@ for (const [key, value] of Object.entries(j.collectionhist)) {
         power: cards[key.toLowerCase()].power,
         description: cards[key.toLowerCase()].description,
         dateStr: d.toLocaleDateString(),
-        date: Math.trunc(d / 1000),
+        date: Math.trunc(d),
         updated: true
     }
     )
