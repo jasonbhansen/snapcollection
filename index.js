@@ -145,9 +145,9 @@ function findSmallestDate(data) {
 }
 
 function adjustChartWidth() {
-    const table = document.getElementById('cards-table');
-    const chartContainer = document.getElementById('rank-chart-container-id');
-    chartContainer.style.width = `${table.offsetWidth}px`;
+    // const table = document.getElementById('cards-table');
+    // const chartContainer = document.getElementById('rank-chart-container-id');
+    // chartContainer.style.width = `${table.offsetWidth}px`;
 }
 
 function createGaugeChart(ctx, value, label, maxValue) {
