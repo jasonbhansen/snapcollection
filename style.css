@@ -15,7 +15,6 @@ table {
     background: #443C82;
     border-radius: 8px;
     overflow: hidden;
-    align-self: center;
 }
 
 th,
@@ -71,18 +70,21 @@ div#logo {
 }
 
 div#search {
+    display: flex;
     width: 100% !important;
-    text-align: center;
-    align-items: center;
     justify-content: center;
     margin-bottom: 15px;
+}
+
+div#search .container {
+    width: 80%;
+    justify-items: center;
 }
 
 div#rankGraph {
     width: 100% !important;
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -90,8 +92,6 @@ div#rankGraph .rank-chart-container {
     width: 80%;
     min-width: 400px;
     background: #443C82;
-    align-self: center;
-    justify-self: center;
     padding: 10px;
 }
 
@@ -99,10 +99,6 @@ div#rankGraph .rank-chart-container {
     position: relative;
     width: 80%;
     margin-bottom: 20px;
-    justify-self: center;
-    align-self: center;
-    justify-content: center;
-    align-items: center;
 }
 
 
@@ -115,8 +111,6 @@ input[type="text"] {
     font-size: 1em;
     background-color: #B0A4E3;
     color: #2E2965;
-    align-self: center;
-    justify-self: center;;
 }
 
 .search-icon {
