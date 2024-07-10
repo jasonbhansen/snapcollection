@@ -143,11 +143,6 @@ function findSmallestDate(data) {
     }, data[0].date);
 }
 
-function adjustChartWidth() {
-    const table = document.querySelector('table');
-    const chartContainer = document.getElementById('chart-container');
-    chartContainer.style.width = `${table.offsetWidth}px`;
-}
 
 function createGaugeChart(ctx, value, label, maxValue) {
     // setup
@@ -187,10 +182,6 @@ function createGaugeChart(ctx, value, label, maxValue) {
     new Chart(ctx, config);
 }
 
-
-
-window.addEventListener('resize', adjustChartWidth);
-window.addEventListener('load', adjustChartWidth);
 
 document.getElementById('searchInput').addEventListener('keyup', filterTable);
 
