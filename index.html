@@ -22,7 +22,8 @@ layout: default
     <div id="logo" class="flex-item"><img id="logo" src="logo.png" /></div>
 
     <div id="rankGraph" class="flex-item">
-        <div class="rank-chart-container" id="rank-chart-container-id"><canvas id="rankGamesChart" width="800" height="400"></canvas></div>
+        <div class="rank-chart-container" id="rank-chart-container-id"><canvas id="rankGamesChart" width="800"
+                height="400"></canvas></div>
     </div>
 
     <div id="gauges">
@@ -31,23 +32,25 @@ layout: default
             <p class="percent" id="pool3Percent">10%</p>
             <p class="percent-label">Pool 3</p>
         </div>
-        
+
         <div class="chart-container">
             <canvas id="pool4Gauge"></canvas>
             <p class="percent" id="pool4Percent">20%</p>
             <p class="percent-label">Series 4</p>
         </div>
-       
+
         <div class="chart-container">
             <canvas id="pool5Gauge"></canvas>
             <p class="percent" id="pool5Percent">30%</p>
             <p class="percent-label">Series 5</p>
         </div>
-        
+
     </div>
-    <div class="search-container flex-tiem">
-        <i class="fas fa-search search-icon"></i>
-        <input type="text" id="searchInput" placeholder="">
+    <div id="search">
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="">
+        </div>
     </div>
     <div id="cards" class="flex-item"></div>
     <script src="./tools/cards.js?{{ site.github.build_revision }}"></script>
