@@ -259,9 +259,9 @@ createGaugeChart(document.getElementById('pool3Gauge'), totalsOwned.get('Pool 3 
 createGaugeChart(document.getElementById('pool4Gauge'), totalsOwned.get('Pool 4 (Series 4)'), 'Pool 4 Cards', totals.get('Pool 4 (Series 4)'));
 createGaugeChart(document.getElementById('pool5Gauge'), totalsOwned.get('Pool 5 (Series 5)'), 'Pool 5 Cards', totals.get('Pool 5 (Series 5)'));
 
-document.getElementById('pool3Percent').innerText = `${100*Math.trunc(totalsOwned.get('Pool 3 (Collection Level 486-?)')/totals.get('Pool 3 (Collection Level 486-?)'))}%`;
-document.getElementById('pool4Percent').innerText = `${100*Math.trunc(totalsOwned.get('Pool 4 (Series 4)')/totals.get('Pool 4 (Series 4)'))}%`;
-document.getElementById('pool5Percent').innerText = `${100*Math.trunc(totalsOwned.get('Pool 5 (Series 5)')/totals.get('Pool 5 (Series 5)'))}%`;
+document.getElementById('pool3Percent').innerText = `${Math.trunc(100*totalsOwned.get('Pool 3 (Collection Level 486-?)')/totals.get('Pool 3 (Collection Level 486-?)'))}%`;
+document.getElementById('pool4Percent').innerText = `${Math.trunc(100*totalsOwned.get('Pool 4 (Series 4)')/totals.get('Pool 4 (Series 4)'))}%`;
+document.getElementById('pool5Percent').innerText = `${Math.trunc(100*totalsOwned.get('Pool 5 (Series 5)')/totals.get('Pool 5 (Series 5)'))}%`;
 
 const table = createTable(owned_cards);
 
