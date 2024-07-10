@@ -73,6 +73,8 @@ div#logo {
 div#search {
     width: 100% !important;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 15px;
 }
 
@@ -94,9 +96,11 @@ div#rankGraph .rank-chart-container {
 }
 
 .search-container {
+    position: relative;
     width: 80%;
     margin-bottom: 20px;
     justify-self: center;
+    align-self: center;
 }
 
 
