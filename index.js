@@ -210,7 +210,7 @@ for (const [key, value] of collection) {
 
 }
 
-for (const [key, value] of cards) {
+for (const [key, value] of Object.entries(cards)) {
     if(totals.has(cards[key.toLowerCase()].source))
         totals.set(cards[key.toLowerCase()].source, totals.get(cards[key.toLowerCase()].source) + 1)
     else
