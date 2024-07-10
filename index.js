@@ -267,6 +267,7 @@ document.getElementById('pool5Percent').innerText = `${Math.trunc(100 * totalsOw
 window.addEventListener('resize', adjustChartWidth);
 window.addEventListener('load', adjustChartWidth);
 
+adjustChartWidth();
 const table = createTable(owned_cards);
 
 
