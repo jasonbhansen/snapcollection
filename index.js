@@ -173,7 +173,7 @@ function createGaugeChart(ctx, value, label, maxValue) {
     };
 
     const gaugeNeedle = {
-        id: "gaugeNeedle",
+        id: label+"gaugeNeedle",
         afterDatasetDraw(chart, args, options) {
           const {
             ctx,
