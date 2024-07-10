@@ -87,7 +87,7 @@ div#rankGraph {
     margin-bottom: 20px;
 }
 
-div#rankGraph .container {
+div#rankGraph .rank-chart-container {
     width: 80%;
     min-width: 400px;
     background: #443C82;
