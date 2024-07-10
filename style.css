@@ -130,7 +130,7 @@ input[type="text"] {
 }
 
 .chart-container {
-    width: 150px;
+    width: 200px;
     margin: 20px;
 }
 
@@ -138,6 +138,6 @@ input[type="text"] {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
-    font-size: 80px;
+    font-size: 50px;
     bottom: 0;
 }
