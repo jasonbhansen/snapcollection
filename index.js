@@ -163,7 +163,7 @@ function createGaugeChart(ctx, value, label, maxValue) {
             ],
             needleValue: value,
             borderColor: "white",
-            borderWidth: 2,
+            borderWidth: 1,
             cutout: "95%",
             circumference: 180,
             rotation: 270,
