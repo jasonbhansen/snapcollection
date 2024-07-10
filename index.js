@@ -1,4 +1,4 @@
-const headers = ['Name','Cost','Power','Description','Source', 'Date'];
+const headers = ['Name', 'Cost', 'Power', 'Description', 'Source', 'Date'];
 
 let sortOrder = {};
 
@@ -58,7 +58,7 @@ function createTable(cards) {
     const tbody = document.createElement('tbody');
 
     const headerRow = document.createElement('tr');
-    
+
     headers.forEach(header => {
         const th = document.createElement('th');
         th.innerText = header;
@@ -88,7 +88,7 @@ function createTable(cards) {
     });
 
     table.appendChild(tbody);
-    sortTable(table,"Name",true);
+    sortTable(table, "Name", true);
     return table;
 }
 
@@ -97,7 +97,7 @@ function sortTable(table, key, ascending) {
     const rows = Array.from(tbody.rows);
     let compare;
 
-     if (key === 'date' || key === "source") {
+    if (key === 'date' || key === "source") {
         console.log("here")
         compare = (a, b) => {
             const valA = parseInt(a.cells[headers.indexOf(key.charAt(0).toUpperCase() + key.slice(1))].getAttribute('value'));
@@ -152,39 +152,40 @@ function adjustChartWidth() {
 function createGaugeChart(ctx, value, label, maxValue) {
     // setup
     const data = {
-        labels: ["Owned","Not Owned"],
+        labels: ["Owned", "Not Owned"],
         datasets: [
-        {
-            label: label,
-            data: [value, maxValue-value],
-            backgroundColor: [
-            "#FFD700",
-            "#2E2965",
-            ],
-            needleValue: value,
-            borderColor: "white",
-            borderWidth: 0,
-            cutout: "95%",
-            circumference: 180,
-            rotation: 270,
-        },
+            {
+                label: label,
+                data: [value, maxValue - value],
+                backgroundColor: [
+                    "#FFD700",
+                    "#2E2965",
+                ],
+                needleValue: value,
+                borderColor: "white",
+                borderWidth: 0,
+                cutout: "95%",
+                circumference: 180,
+                rotation: 270,
+            },
         ],
     };
-      const config = {
+    const config = {
         type: "doughnut",
         data,
         options: {
-          plugins: {
-            legend: {
-              display: false,
+            animation: false,
+            plugins: {
+                legend: {
+                    display: false,
+                },
+                tooltip: {
+                    yAlign: "bottom",
+                    displayColors: false
+                },
             },
-            tooltip: {
-              yAlign: "bottom",
-              displayColors: false
-            },
-          },
         },
-      };
+    };
 
     new Chart(ctx, config);
 }
@@ -210,7 +211,7 @@ for (const [key, value] of Object.entries(j.collection)) {
         updated: false
     })
 
-    if(totalsOwned.has(cards[key.toLowerCase()].source))
+    if (totalsOwned.has(cards[key.toLowerCase()].source))
         totalsOwned.set(cards[key.toLowerCase()].source, totalsOwned.get(cards[key.toLowerCase()].source) + 1)
     else
         totalsOwned.set(cards[key.toLowerCase()].source, 1)
@@ -249,19 +250,19 @@ for (const [key, value] of collection) {
 }
 
 for (const [key, value] of Object.entries(cards)) {
-    if(totals.has(cards[key.toLowerCase()].source))
+    if (totals.has(cards[key.toLowerCase()].source))
         totals.set(cards[key.toLowerCase()].source, totals.get(cards[key.toLowerCase()].source) + 1)
     else
-    totals.set(cards[key.toLowerCase()].source, 1)
+        totals.set(cards[key.toLowerCase()].source, 1)
 }
 
 createGaugeChart(document.getElementById('pool3Gauge'), totalsOwned.get('Pool 3 (Collection Level 486-?)'), 'Pool 3 Cards', totals.get('Pool 3 (Collection Level 486-?)'));
 createGaugeChart(document.getElementById('pool4Gauge'), totalsOwned.get('Pool 4 (Series 4)'), 'Pool 4 Cards', totals.get('Pool 4 (Series 4)'));
 createGaugeChart(document.getElementById('pool5Gauge'), totalsOwned.get('Pool 5 (Series 5)'), 'Pool 5 Cards', totals.get('Pool 5 (Series 5)'));
 
-document.getElementById('pool3Percent').innerText = `${Math.trunc(100*totalsOwned.get('Pool 3 (Collection Level 486-?)')/totals.get('Pool 3 (Collection Level 486-?)'))}%`;
-document.getElementById('pool4Percent').innerText = `${Math.trunc(100*totalsOwned.get('Pool 4 (Series 4)')/totals.get('Pool 4 (Series 4)'))}%`;
-document.getElementById('pool5Percent').innerText = `${Math.trunc(100*totalsOwned.get('Pool 5 (Series 5)')/totals.get('Pool 5 (Series 5)'))}%`;
+document.getElementById('pool3Percent').innerText = `${Math.trunc(100 * totalsOwned.get('Pool 3 (Collection Level 486-?)') / totals.get('Pool 3 (Collection Level 486-?)'))}%`;
+document.getElementById('pool4Percent').innerText = `${Math.trunc(100 * totalsOwned.get('Pool 4 (Series 4)') / totals.get('Pool 4 (Series 4)'))}%`;
+document.getElementById('pool5Percent').innerText = `${Math.trunc(100 * totalsOwned.get('Pool 5 (Series 5)') / totals.get('Pool 5 (Series 5)'))}%`;
 
 window.addEventListener('resize', adjustChartWidth);
 window.addEventListener('load', adjustChartWidth);
@@ -271,7 +272,7 @@ const table = createTable(owned_cards);
 
 document.getElementById('cards').appendChild(table);
 var data = j.rankhistory;
-data = data.filter((e,i) => i % 2 == 0);
+data = data.filter((e, i) => i % 2 == 0);
 const labels = data.map(d => new Date(d.date * 1000).toLocaleDateString());
 const rankData = data.map(d => d.Rank);
 const gamesPlayedData = data.map(d => d.GamesPlayedInSeason);
