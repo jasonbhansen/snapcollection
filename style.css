@@ -131,6 +131,7 @@ input[type="text"] {
 
 .chart-container {
     width: 200px;
+    height: 200px;
     margin: 20px;
     position: relative;
 }
