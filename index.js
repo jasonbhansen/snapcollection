@@ -145,9 +145,9 @@ function findSmallestDate(data) {
 }
 
 function adjustChartWidth() {
-    // const table = document.getElementById('cards-table');
-    // const chartContainer = document.getElementById('rank-chart-container-id');
-    // chartContainer.style.width = `${table.offsetWidth}px`;
+    const table = document.getElementById('cards-table');
+    const chartContainer = document.getElementById('rank-chart-container-id');
+    chartContainer.style.width = `${table.offsetWidth}px`;
 }
 
 function createGaugeChart(ctx, value, label, maxValue) {
@@ -265,11 +265,13 @@ document.getElementById('pool3Percent').innerText = `${Math.trunc(100 * totalsOw
 document.getElementById('pool4Percent').innerText = `${Math.trunc(100 * totalsOwned.get('Pool 4 (Series 4)') / totals.get('Pool 4 (Series 4)'))}%`;
 document.getElementById('pool5Percent').innerText = `${Math.trunc(100 * totalsOwned.get('Pool 5 (Series 5)') / totals.get('Pool 5 (Series 5)'))}%`;
 
+
+const table = createTable(owned_cards);
+
 window.addEventListener('resize', adjustChartWidth);
 window.addEventListener('load', adjustChartWidth);
 
 adjustChartWidth();
-const table = createTable(owned_cards);
 
 
 document.getElementById('cards').appendChild(table);
