@@ -147,7 +147,7 @@ input[type="text"] {
     left: 50%;
     transform: translate(-50%, 0);
     font-size: 45px;
-    bottom: 25px;
+    bottom: 20px;
     font-weight: bold;
 }
 
@@ -156,5 +156,5 @@ input[type="text"] {
     left: 50%;
     transform: translate(-50%, 0);
     font-size: 15px;
-    bottom: 20px;
+    bottom: 50px;
 }
