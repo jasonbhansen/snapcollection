@@ -156,6 +156,8 @@ document.getElementById('searchInput').addEventListener('keyup', filterTable);
 
 
 var collection = new Map();
+var totalsOwned = new Map();
+var totals = new Map();
 
 for (const [key, value] of Object.entries(j.collection)) {
     var d = new Date()
@@ -169,6 +171,11 @@ for (const [key, value] of Object.entries(j.collection)) {
         date: Math.trunc(d),
         updated: false
     })
+
+    if(totalsOwned.has(cards[key.toLowerCase()].source))
+        totalsOwned.set(cards[key.toLowerCase()].source, totalsOwned.get(cards[key.toLowerCase()].source) + 1)
+    else
+        totalsOwned.set(cards[key.toLowerCase()].source, 1)
 }
 
 for (const [key, value] of Object.entries(j.collectionhist)) {
@@ -202,6 +209,16 @@ for (const [key, value] of collection) {
     })
 
 }
+
+for (const [key, value] of cards) {
+    if(totals.has(cards[key.toLowerCase()].source))
+        totals.set(cards[key.toLowerCase()].source, totals.get(cards[key.toLowerCase()].source) + 1)
+    else
+    totals.set(cards[key.toLowerCase()].source, 1)
+}
+
+console.log(totals);
+console.log(totalsOwned);
 
 const table = createTable(owned_cards);
 

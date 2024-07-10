@@ -5,6 +5,7 @@ const { j } = require("./me")
 console.log(Object.keys(j.collectionhist).length)
 
 var collection = new Map();
+var totalsOwned = new Map();
 
 for(const [key, value] of Object.entries(j.collection)){
     collection.set(key, { 
@@ -14,6 +15,7 @@ for(const [key, value] of Object.entries(j.collection)){
         date: Math.trunc(new Date().getTime() / 1000),
         updated: false
     })
+    
 }
 
 for(const [key,value] of Object.entries(j.collectionhist)) {
@@ -31,6 +33,8 @@ for(const [key,value] of Object.entries(j.collectionhist)) {
     }
     )
 } 
+
+for(const [ key, value] of Object.entries ())
 
 console.log(collection)
 
