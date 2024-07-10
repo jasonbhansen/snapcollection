@@ -21,25 +21,29 @@ layout: default
 <body>
     <div id="logo" class="flex-item"><img id="logo" src="logo.png" /></div>
 
-    <div id="rankGraph"  class="flex-item">
+    <div id="rankGraph" class="flex-item">
         <div class="container"><canvas id="rankGamesChart" width="800" height="400"></canvas></div>
     </div>
 
-    <div class="chart-container">
-        <canvas id="pool3Gauge"></canvas>
+    <div>
+        <div class="chart-container">
+            <canvas id="pool3Gauge"></canvas>
+        </div>
+        <p>Pool 3</p>
+        <div class="chart-container">
+            <canvas id="pool4Gauge"></canvas>
+        </div>
+        <p>Series 4</p>
+        <div class="chart-container">
+            <canvas id="pool5Gauge"></canvas>
+        </div>
+        <p>Series 5</p>
     </div>
-    <div class="chart-container">
-        <canvas id="pool4Gauge"></canvas>
-    </div>
-    <div class="chart-container">
-        <canvas id="pool5Gauge"></canvas>
-    </div>
-
     <div class="search-container flex-tiem">
         <i class="fas fa-search search-icon"></i>
         <input type="text" id="searchInput" placeholder="">
     </div>
-    <div id="cards"  class="flex-item"></div>
+    <div id="cards" class="flex-item"></div>
     <script src="./tools/cards.js?{{ site.github.build_revision }}"></script>
     <script src="./tools/me.js?{{ site.github.build_revision }}"></script>
     <script src="index.js?{{ site.github.build_revision }}"></script>
