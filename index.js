@@ -88,6 +88,7 @@ function createTable(cards) {
     });
 
     table.appendChild(tbody);
+    table.setAttribute('id','cards-table');
     sortTable(table, "Name", true);
     return table;
 }
@@ -144,7 +145,7 @@ function findSmallestDate(data) {
 }
 
 function adjustChartWidth() {
-    const table = document.getElementById('cards');
+    const table = document.getElementById('cards-table');
     const chartContainer = document.getElementById('rank-chart-container-id');
     chartContainer.style.width = `${table.offsetWidth}px`;
 }
