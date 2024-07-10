@@ -45,7 +45,6 @@ tr:hover {
     background-color: #473A7B;
 }
 
-
 img#logo {
     height: 250px;
 }
@@ -76,6 +75,8 @@ div#logo {
 
 div#search {
     width: 100% !important;
+    display: flex;
+    justify-content: center;
 }
 
 div#search .container {
