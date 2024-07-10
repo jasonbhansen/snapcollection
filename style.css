@@ -67,6 +67,7 @@ div#gauges {
 }
 
 div#gauges .container {
+    display: flex;
     flex-direction: row;
     width: 80%;
 }
@@ -101,7 +102,6 @@ div#rankGraph .rank-chart-container {
 
 .search-container {
     position: relative;
-    margin-bottom: 20px;
 }
 
 input[type="text"] {
