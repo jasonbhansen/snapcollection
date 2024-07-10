@@ -63,6 +63,13 @@ img#logo {
 div#cards {
     width:100% !important;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#gauges {
+    width: 80%;
+    display: flex;
     justify-content: center
 }
 
@@ -126,6 +133,6 @@ input[type="text"] {
 }
 
 .chart-container {
-    width: 20%;
+    width: 150px;
     margin: 20px;
 }
