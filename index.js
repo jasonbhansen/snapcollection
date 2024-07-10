@@ -143,6 +143,11 @@ function findSmallestDate(data) {
     }, data[0].date);
 }
 
+function adjustChartWidth() {
+    const table = document.querySelector('table');
+    const chartContainer = document.getElementById('rank-chart-container');
+    chartContainer.style.width = `${table.offsetWidth}px`;
+}
 
 function createGaugeChart(ctx, value, label, maxValue) {
     // setup
@@ -157,6 +162,8 @@ function createGaugeChart(ctx, value, label, maxValue) {
             "#2E2965",
             ],
             needleValue: value,
+            borderColor: "white",
+            borderWidth: 0,
             cutout: "95%",
             circumference: 180,
             rotation: 270,
