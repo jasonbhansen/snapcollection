@@ -10,12 +10,9 @@ body {
     flex-direction: column;
 }
 
-
-
 table {
     width: 80%;
     border-collapse: collapse;
-    margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background: #443C82;
     border-radius: 8px;
@@ -56,13 +53,10 @@ img#logo {
 }
 
 div#cards {
-    padding: 20px;
   width: 100% !important;
 }
 
 div#gauges {
-    padding: 20px;
-
     width: 100% !important;
 }
 
@@ -77,9 +71,7 @@ div#logo {
 }
 
 div#search {
-    padding: 20px;
     width: 100% !important;
-    margin-bottom: 15px;
 }
 
 div#search .container {
@@ -88,16 +80,12 @@ div#search .container {
 
 div#rankGraph {
     width: 100% !important;
-    margin-bottom: 20px;
-    padding: 20px;
-
 }
 
 div#rankGraph .rank-chart-container {
     width: 80%;
     min-width: 400px;
     background: #443C82;
-    padding: 10px;
 }
 
 .search-container {
@@ -128,7 +116,6 @@ input[type="text"] {
     min-width: 200px;
     height: 200px;
     min-height: 200px;
-    margin: 20px;
     position: relative;
     float: left;
 }
