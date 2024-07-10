@@ -88,7 +88,7 @@ function createTable(cards) {
     });
 
     table.appendChild(tbody);
-    table.setAttribute('id','cards-table');
+    table.id = 'cards-table';
     sortTable(table, "Name", true);
     return table;
 }
