@@ -155,8 +155,8 @@ function createGaugeChart(ctx, value, label, maxValue) {
         labels: ["Safe", "Risky", "High Risk"],
         datasets: [
         {
-            label: "Gauge",
-            data: [100, 65, 35],
+            label: label,
+            data: [value, maxValue-value],
             backgroundColor: [
             "rgba(75, 192, 192, 0.8)",
             "rgba(255, 206, 86, 0.8)",
