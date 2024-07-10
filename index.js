@@ -205,31 +205,12 @@ function createGaugeChart(ctx, value, label, maxValue) {
           const cx = width / 2;
           const cy = chart._metasets[0].data[0].y;
       
-          //needle
-          ctx.translate(cx, cy);
-          ctx.rotate(angle);
-          ctx.beginPath();
-          ctx.moveTo(0, -2);
-          ctx.lineTo(height - ctx.canvas.offsetTop - 160, 0); // change 160 value if the needle size gets changed
-          ctx.lineTo(0, 2);
-          ctx.fillStyle = "#444";
-          ctx.fill();
-          //needle dot
-          ctx.translate(-cx, -cy);
-          ctx.beginPath();
-          ctx.arc(cx, cy, 5, 0, 10);
-          ctx.fill();
-          ctx.restore();
+
       
           //text
-          ctx.font = "20px Ubuntu";
+          ctx.font = "40px";
           ctx.fillStyle = "#444";
-          ctx.fillText(needleValue + " CPM", cx, cy + 50);
-          ctx.font = "10px Ubuntu";
-          ctx.fillText(0, 5, cy + 20);
-          ctx.fillText(100, cx, 90);
-          ctx.fillText("10k", cx + 185, 200); // change values if the position gets changed
-          ctx.fillText("1M", cx + 193, 320); // change values if the position gets changed
+          ctx.fillText(label, cx, cy + 50);
           ctx.textAlign = "center";
           ctx.restore();
         },
