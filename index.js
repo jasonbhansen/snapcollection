@@ -151,7 +151,7 @@ function adjustChartWidth() {
 
 function createGaugeChart(ctx, value, label, maxValue) {
     new Chart(ctx, {
-        type: 'gauge',
+        type: 'doughnut',
         data: {
             datasets: [{
                 value: value,
