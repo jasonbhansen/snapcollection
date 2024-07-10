@@ -145,6 +145,14 @@ input[type="text"] {
 .percent {
     position: absolute;
     left: 50%;
+    transform: translate(-60%, 0);
+    font-size: 25px;
+    bottom: 0;
+}
+
+.percent-label {
+    position: absolute;
+    left: 50%;
     transform: translate(-50%, 0);
     font-size: 25px;
     bottom: 0;
