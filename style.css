@@ -56,10 +56,12 @@ img#logo {
 }
 
 div#cards {
-    width: 100% !important;
+    padding-left: 20px;
+  width: 100% !important;
 }
 
 div#gauges {
+    padding-left: 20px;
     width: 100% !important;
 }
 
@@ -73,6 +75,7 @@ div#logo {
 }
 
 div#search {
+    padding-left: 20px;
     width: 100% !important;
     margin-bottom: 15px;
 }
