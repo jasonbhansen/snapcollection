@@ -50,6 +50,8 @@ img#logo {
 }
 
 div#cards {
+    position: relative;
+
   width: 100% !important;
   display: flex;
     justify-content: center;
@@ -73,8 +75,7 @@ div#logo {
 }
 
 div#search {
-    position: relative;
-    float: left;
+    position: absolute;
     top: -100px;
     width: 100% !important;
     display: flex;
