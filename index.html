@@ -19,14 +19,14 @@ layout: default
 </head>
 
 <body>
-    <div id="logo" class="flex-item"><img id="logo" src="logo.png" /></div>
+    <div id="logo" class="flex-item margin-20"><img id="logo" src="logo.png" /></div>
 
-    <div id="rankGraph" class="flex-item">
+    <div id="rankGraph" class="flex-item margin-20">
         <div class="rank-chart-container" id="rank-chart-container-id"><canvas id="rankGamesChart" width="800"
                 height="400"></canvas></div>
     </div>
 
-    <div id="gauges">
+    <div id="gauges" class="margin-20">
         <div class="container">
         <div class="chart-container">
             <canvas id="pool3Gauge"></canvas>
@@ -48,7 +48,7 @@ layout: default
     </div>
 
     </div>
-    <div id="search">
+    <div id="search" class="margin-20">
         <div class="container">
             <div class="search-container">
                 <i class="fas fa-search search-icon"></i>
@@ -56,7 +56,7 @@ layout: default
             </div>
         </div>
     </div>
-    <div id="cards" class="flex-item"></div>
+    <div id="cards" class="flex-item margin-20"></div>
     <script src="./tools/cards.js?{{ site.github.build_revision }}"></script>
     <script src="./tools/me.js?{{ site.github.build_revision }}"></script>
     <script src="index.js?{{ site.github.build_revision }}"></script>
