@@ -60,6 +60,11 @@ div#cards {
 }
 
 div#gauges {
+    width: 100% !important;
+}
+
+div#gauges .container {
+    flex-direction: row;
     width: 80%;
 }
 
