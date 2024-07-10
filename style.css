@@ -8,11 +8,6 @@ body {
     flex-direction: column;
 }
 
-div {
-    display: flex;
-    justify-content: center;
-}
-
 table {
     width: 80%;
     border-collapse: collapse;
@@ -57,10 +52,14 @@ img#logo {
 
 div#cards {
   width: 100% !important;
+  display: flex;
+    justify-content: center;
 }
 
 div#gauges {
     width: 100% !important;
+    display: flex;
+    justify-content: center;
 }
 
 div#gauges .container {
@@ -71,6 +70,8 @@ div#gauges .container {
 
 div#logo {
     width: 100% !important;
+    display: flex;
+    justify-content: center;
 }
 
 div#search {
@@ -83,6 +84,8 @@ div#search .container {
 
 div#rankGraph {
     width: 100% !important;
+    display: flex;
+    justify-content: center;
 }
 
 div#rankGraph .rank-chart-container {
