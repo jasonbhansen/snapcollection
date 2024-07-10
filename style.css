@@ -56,12 +56,13 @@ img#logo {
 }
 
 div#cards {
-    padding-left: 20px;
+    padding: 20px;
   width: 100% !important;
 }
 
 div#gauges {
-    padding-left: 20px;
+    padding: 20px;
+
     width: 100% !important;
 }
 
@@ -75,7 +76,7 @@ div#logo {
 }
 
 div#search {
-    padding-left: 20px;
+    padding: 20px;
     width: 100% !important;
     margin-bottom: 15px;
 }
@@ -87,6 +88,8 @@ div#search .container {
 div#rankGraph {
     width: 100% !important;
     margin-bottom: 20px;
+    padding: 20px;
+
 }
 
 div#rankGraph .rank-chart-container {
