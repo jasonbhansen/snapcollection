@@ -249,7 +249,7 @@ function createGaugeChart(ctx, value, label, maxValue) {
               displayColors: false,
               callbacks: {
                 label: function (tooltipItem, data, value) {
-                  return tooltipItem.label + " " + value;
+                  return tooltipItem.label + " " + data;
                 },
               },
             },
