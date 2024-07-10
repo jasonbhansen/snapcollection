@@ -2,17 +2,8 @@ body {
     background-color: #604DA7;
     color: #FFFFFF;
     font-family: 'Arial', sans-serif;
-    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-@media (max-width: 800px) {
-    .flex-item {
-        flex: 100%;
-    }
 }
 
 
