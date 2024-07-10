@@ -152,14 +152,14 @@ function adjustChartWidth() {
 function createGaugeChart(ctx, value, label, maxValue) {
     // setup
     const data = {
-        labels: ["Safe", "Risky", "High Risk"],
+        labels: ["Owned","Not Owned"],
         datasets: [
         {
             label: label,
             data: [value, maxValue-value],
             backgroundColor: [
-            "rgba(75, 192, 192, 0.8)",
-            "rgba(255, 206, 86, 0.8)",
+            "#FFD700",
+            "#2E2965",
             ],
             needleValue: value,
             borderColor: "white",
