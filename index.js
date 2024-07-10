@@ -171,51 +171,6 @@ function createGaugeChart(ctx, value, label, maxValue) {
         },
         ],
     };
-
-    const gaugeNeedle = {
-        id: label+"gaugeNeedle",
-        afterDatasetDraw(chart, args, options) {
-          const {
-            ctx,
-            config,
-            data,
-            chartArea: { top, right, bottom, left, width, height },
-          } = chart;
-          ctx.save();
-          const needleValue = data.datasets[0].needleValue;
-          const dataTotal = data.datasets[0].data.reduce((a, b) => a + b, 0);
-      
-          if (needleValue <= 100) {
-            var angle = Math.PI + (1 / 200) * needleValue * Math.PI;
-          } else if (needleValue <= 10000) {
-            var angle =
-              Math.PI +
-              (1 / 200) * 100 * Math.PI +
-              ((1 / 200) * needleValue * Math.PI * 65) / 10000;
-          } else if (needleValue <= 1000000) {
-            var angle =
-              Math.PI +
-              (1 / 200) * 100 * Math.PI +
-              ((1 / 200) * 10000 * Math.PI * 65) / 10000 +
-              ((1 / 200) * needleValue * Math.PI * 35) / 1000000;
-          } else {
-            var angle = 0;
-          }
-      
-          const cx = width / 2;
-          const cy = chart._metasets[0].data[0].y;
-      
-
-      
-          //text
-          ctx.font = "40px";
-          ctx.fillStyle = "#444";
-          ctx.fillText(label, cx, cy + 50);
-          ctx.textAlign = "center";
-          ctx.restore();
-        },
-      };
-
       const config = {
         type: "doughnut",
         data,
@@ -226,16 +181,10 @@ function createGaugeChart(ctx, value, label, maxValue) {
             },
             tooltip: {
               yAlign: "bottom",
-              displayColors: false,
-              callbacks: {
-                label: function (tooltipItem, data, value) {
-                  return tooltipItem.label + " " + data;
-                },
-              },
+              displayColors: false
             },
           },
         },
-        plugins: [gaugeNeedle],
       };
 
     new Chart(ctx, config);
