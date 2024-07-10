@@ -95,11 +95,8 @@ div#rankGraph .rank-chart-container {
 
 .search-container {
     position: relative;
-    width: 80%;
     margin-bottom: 20px;
 }
-
-
 
 input[type="text"] {
     width: 100%;
