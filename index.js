@@ -263,6 +263,9 @@ document.getElementById('pool3Percent').innerText = `${Math.trunc(100*totalsOwne
 document.getElementById('pool4Percent').innerText = `${Math.trunc(100*totalsOwned.get('Pool 4 (Series 4)')/totals.get('Pool 4 (Series 4)'))}%`;
 document.getElementById('pool5Percent').innerText = `${Math.trunc(100*totalsOwned.get('Pool 5 (Series 5)')/totals.get('Pool 5 (Series 5)'))}%`;
 
+window.addEventListener('resize', adjustChartWidth);
+window.addEventListener('load', adjustChartWidth);
+
 const table = createTable(owned_cards);
 
 
