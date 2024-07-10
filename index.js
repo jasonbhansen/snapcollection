@@ -267,6 +267,8 @@ document.getElementById('pool5Percent').innerText = `${Math.trunc(100 * totalsOw
 
 
 const table = createTable(owned_cards);
+document.getElementById('cards').appendChild(table);
+
 
 window.addEventListener('resize', adjustChartWidth);
 window.addEventListener('load', adjustChartWidth);
@@ -274,7 +276,6 @@ window.addEventListener('load', adjustChartWidth);
 adjustChartWidth();
 
 
-document.getElementById('cards').appendChild(table);
 var data = j.rankhistory;
 data = data.filter((e, i) => i % 2 == 0);
 const labels = data.map(d => new Date(d.date * 1000).toLocaleDateString());
