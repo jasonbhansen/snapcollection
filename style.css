@@ -144,6 +144,6 @@ input[type="text"] {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
-    font-size: 35px;
+    font-size: 25px;
     bottom: 0;
 }
