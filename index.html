@@ -15,6 +15,7 @@ layout: default
     <link rel="stylesheet" href="style.css?{{ site.github.build_revision }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-gauge"></script>
 </head>
 
 <body>
@@ -24,7 +25,15 @@ layout: default
         <div class="container"><canvas id="rankGamesChart" width="800" height="400"></canvas></div>
     </div>
 
-
+    <div class="chart-container">
+        <canvas id="pool3Gauge"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="pool4Gauge"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="pool5Gauge"></canvas>
+    </div>
 
     <div class="search-container flex-tiem">
         <i class="fas fa-search search-icon"></i>

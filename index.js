@@ -149,6 +149,45 @@ function adjustChartWidth() {
     chartContainer.style.width = `${table.offsetWidth}px`;
 }
 
+function createGaugeChart(ctx, value, label, maxValue) {
+    new Chart(ctx, {
+        type: 'gauge',
+        data: {
+            datasets: [{
+                value: value,
+                data: [value, maxValue - value],
+                backgroundColor: ['#FF0000', '#E0E0E0']
+            }]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: label,
+                fontColor: '#FFFFFF'
+            },
+            layout: {
+                padding: {
+                    top: 20
+                }
+            },
+            needle: {
+                radiusPercentage: 2,
+                widthPercentage: 3.2,
+                lengthPercentage: 80,
+                color: '#FFFFFF'
+            },
+            valueLabel: {
+                fontSize: 20,
+                fontColor: '#FFFFFF',
+                formatter: Math.round
+            }
+        }
+    });
+}
+
+
+
 window.addEventListener('resize', adjustChartWidth);
 window.addEventListener('load', adjustChartWidth);
 
@@ -216,6 +255,11 @@ for (const [key, value] of Object.entries(cards)) {
     else
     totals.set(cards[key.toLowerCase()].source, 1)
 }
+
+createGaugeChart(document.getElementById('pool3Gauge'), totalsOwned.get('Pool 3 (Collection Level 486-?)'), 'Pool 3 Cards', totals.get('Pool 3 (Collection Level 486-?)'));
+createGaugeChart(document.getElementById('pool4Gauge'), totalsOwned.get('Pool 4 (Series 4)'), 'Pool 4 Cards', totals.get('Pool 4 (Series 4)'));
+createGaugeChart(document.getElementById('pool5Gauge'), totalsOwned.get('Pool 5 (Series 5)'), 'Pool 5 Cards', totals.get('Pool 5 (Series 5)'));
+
 
 console.log(totals);
 console.log(totalsOwned);
