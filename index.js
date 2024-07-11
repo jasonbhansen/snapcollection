@@ -269,7 +269,7 @@ document.getElementById('pool5Percent').innerText = `${Math.trunc(100 * totalsOw
 
 
 const table = createTable(owned_cards);
-document.getElementById('cards').appendChild(table);
+document.getElementById('cards').getElementsByClassName("container")[0].appendChild(table);
 
 
 window.addEventListener('resize', adjustChartWidth);
