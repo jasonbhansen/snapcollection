@@ -45,41 +45,31 @@ tr:hover {
     background-color: #473A7B;
 }
 
+
 img#logo {
     height: 250px;
 }
 
 div#cards {
-    position: relative;
-    width: 100% !important;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+  width: 100% !important;
 }
 
 div#gauges {
     width: 100% !important;
-    display: flex;
-    justify-content: center;
 }
 
 div#gauges .container {
     display: flex;
     flex-direction: row;
+    width: 80%;
 }
 
 div#logo {
     width: 100% !important;
-    display: flex;
-    justify-content: center;
 }
 
 div#search {
-    position: absolute;
-    top: -50px;
     width: 100% !important;
-    display: flex;
-    left: 150px;
 }
 
 div#search .container {
@@ -88,8 +78,6 @@ div#search .container {
 
 div#rankGraph {
     width: 100% !important;
-    display: flex;
-    justify-content: center;
 }
 
 div#rankGraph .rank-chart-container {
@@ -156,3 +144,23 @@ input[type="text"] {
     margin-bottom: 20px;
     margin-left: 20px;
 }
+
+@media screen and (min-width: 768px) {
+    div#cards {
+        position: relative;
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    div#search {
+        position: absolute;
+        top: -50px;
+        width: 100% !important;
+        display: flex;
+        left: 150px;
+    }
+}
+    
+
