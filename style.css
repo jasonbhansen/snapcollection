@@ -70,8 +70,9 @@ div#search .container {
 }
 
 div#rankGraph .rank-chart-container {
-    width: 80%;
-    min-width: 400px;
+    width: 800px;
+    height: 400px;
+    min-width: 800px;
     background: #443C82;
 }
 
