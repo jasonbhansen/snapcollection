@@ -71,6 +71,8 @@ div#search .container {
 
 div#rankGraph .rank-chart-container {
     min-width: 400px;
+    width: 100%;
+    min-height: 400px;
     background: #443C82;
 }
 
