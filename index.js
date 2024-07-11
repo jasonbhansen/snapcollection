@@ -1,6 +1,6 @@
 const headers = ['Name', 'Cost', 'Power', 'Description', 'Source', 'Date'];
 
-const ignore_list = ['widowsbite', 'widowskiss', 'wintersoldier','mysterioillusion']
+const ignore_list = ['acidarrow','basicarrow','chimichanga','widowsbite', 'widowskiss', 'wintersoldier','mysterioillusion']
 
 let sortOrder = {};
 
@@ -257,7 +257,7 @@ for (const [key, value] of collection) {
 }
 
 for (const [key, value] of Object.entries(cards)) {
-    if (cards[key.toLowerCase()].is_Token === "0" && !ignore_list.includes(key.toLowerCase())) {
+    if (cards[key.toLowerCase()].is_Token === "0" && !ignore_list.includes(key.toLowerCase() && Object.keys(cards[key.toLowerCase()]).includes("stats_winrate"))) {
         
         let source = getSourceLabel(cards[key.toLowerCase()].source);
 
