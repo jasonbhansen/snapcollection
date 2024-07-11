@@ -222,6 +222,9 @@ for (const [key, value] of Object.entries(j.collection)) {
         totalsOwned.set(source, totalsOwned.get(source) + 1)
     else
         totalsOwned.set(source, 1)
+
+    if(source === "Pool 5")
+        console.log(key.toLocaleLowerCase())
 }
 
 for (const [key, value] of Object.entries(j.collectionhist)) {
