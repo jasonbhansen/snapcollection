@@ -275,7 +275,8 @@ for (const [key, value] of Object.entries(cards)) {
 }
 
 owned_cards.forEach( card => {
-    all_cards_map.get(getSourceLabel(card.source)).filter(x => x != card.name)
+    var source = getSourceLabel(card.source);
+    all_cards_map.set(source,all_cards_map.get(source).filter(x => x != card.name));
 })
 
 console.log(all_cards_map)
