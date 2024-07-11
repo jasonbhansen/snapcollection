@@ -58,7 +58,6 @@ img#logo {
 div#gauges .container {
     display: flex;
     flex-direction: row;
-    width: 80% !important;
 }
 
 div#logo {
