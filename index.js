@@ -263,7 +263,6 @@ var all_cards_map = []
 for (const [key, value] of Object.entries(cards)) {
 
     if (value.is_Token === "0" && !ignore_list.includes(key.toLowerCase()) && Object.keys(value).includes("stats_winrate")) {
-        all_cards.push(value.name);
         let source = getSourceLabel(value.source);
         if (totals.has(source)){ 
             totals.set(source, totals.get(source) + 1)
