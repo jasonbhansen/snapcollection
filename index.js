@@ -291,7 +291,7 @@ function createRankChart(ctx, data){
 
 }
 
-function toggleMore(containerId) {
+export function toggleMore(containerId) {
     const container = document.getElementById(containerId);
     container.style.display = container.style.display === 'none' ? 'block' : 'none';
 }
@@ -409,7 +409,6 @@ function main() {
     populateMissingCards('pool3List', all_cards_map.get('Pool 3'));
     populateMissingCards('pool4List', all_cards_map.get('Pool 4'));
     populateMissingCards('pool5List', all_cards_map.get('Pool 5'));
-    
     
     const table = createTable(owned_cards);
     document.getElementById('cards').getElementsByClassName("container")[0].appendChild(table);
