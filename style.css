@@ -66,6 +66,7 @@ div#gauges .container {
 
 div#logo {
     width: 100% !important;
+    text-align: center;
 }
 
 div#search {
@@ -160,6 +161,14 @@ input[type="text"] {
         width: 100% !important;
         display: flex;
         left: 150px;
+    }
+
+    div#logo {
+        justify-content: center;
+    }
+
+    div#gauges {
+        justify-content: center;
     }
 }
     
