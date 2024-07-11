@@ -291,6 +291,20 @@ function createRankChart(ctx, data){
 
 }
 
+function toggleMore(containerId) {
+    const container = document.getElementById(containerId);
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+}
+
+function populateMissingCards(listId, cards) {
+    const list = document.getElementById(listId);
+    cards.forEach(card => {
+        const listItem = document.createElement('li');
+        listItem.innerText = card;
+        list.appendChild(listItem);
+    });
+}
+
 function process_cards(){
     
     var collection = new Map();
@@ -391,6 +405,10 @@ function main() {
     document.getElementById('pool3Percent').innerText = `${Math.trunc(100 * totalsOwned.get('Pool 3') / totals.get('Pool 3'))}%`;
     document.getElementById('pool4Percent').innerText = `${Math.trunc(100 * totalsOwned.get('Pool 4') / totals.get('Pool 4'))}%`;
     document.getElementById('pool5Percent').innerText = `${Math.trunc(100 * totalsOwned.get('Pool 5') / totals.get('Pool 5'))}%`;
+
+    populateMissingCards('pool3List', all_cards_map.get('Pool 3'));
+    populateMissingCards('pool4List', all_cards_map.get('Pool 4'));
+    populateMissingCards('pool5List', all_cards_map.get('Pool 5'));
     
     
     const table = createTable(owned_cards);
@@ -402,6 +420,7 @@ function main() {
     window.addEventListener('resize', adjustChartWidth);
     window.addEventListener('load', adjustChartWidth);
     adjustChartWidth();
+    window.dispatchEvent(new Event('resize'));
 }
 
 main();

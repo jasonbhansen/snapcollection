@@ -148,6 +148,38 @@ div#cards {
     justify-content: center;
 }
 
+.more-container {
+    display: none;
+    margin-top: 20px;
+}
+
+.more-container h3 {
+    color: #FFFFFF;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.more-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.more-container li {
+    color: #FFFFFF;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.show-more-button {
+    background-color: #FFD700;
+    color: #2E2965;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
 
     body{
