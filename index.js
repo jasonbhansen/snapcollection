@@ -258,7 +258,7 @@ for (const [key, value] of collection) {
 
 }
 
-var all_cards_map = []
+var all_cards_map = new Map();
 
 for (const [key, value] of Object.entries(cards)) {
 
