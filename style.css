@@ -165,10 +165,18 @@ input[type="text"] {
 
     div#logo {
         justify-content: center;
+        display: flex;
+
     }
 
     div#gauges {
         justify-content: center;
+        display: flex;
+    }
+
+    div#rankGraph{
+        justify-content: center;
+        display: flex;
     }
 }
     
