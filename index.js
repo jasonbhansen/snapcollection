@@ -258,13 +258,10 @@ for (const [key, value] of collection) {
 
 for (const [key, value] of Object.entries(cards)) {
 
-    if(key.toLowerCase() === "acidarrow"){
-        console.log(value)
-        console.log(Object.keys(cards[key.toLowerCase()]).includes("stats_winrate"))
-    }
-    if (cards[key.toLowerCase()].is_Token === "0" && !ignore_list.includes(key.toLowerCase()) && Object.keys(cards[key.toLowerCase()]).includes("stats_winrate")) {
+   
+    if (value.is_Token === "0" && !ignore_list.includes(key.toLowerCase()) && Object.keys(value).includes("stats_winrate")) {
         
-        let source = getSourceLabel(cards[key.toLowerCase()].source);
+        let source = getSourceLabel(value.source);
 
         if(source === "Pool 5")
             console.log(key.toLocaleLowerCase())
