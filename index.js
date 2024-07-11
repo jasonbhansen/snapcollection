@@ -195,9 +195,6 @@ function createGaugeChart(ctx, value, label, maxValue) {
     new Chart(ctx, config);
 }
 
-function handleResize(chart){
-    chart.update()
-}
 
 function createRankChart(ctx, data){
     data = data.filter((e, i) => i % 2 == 0);
@@ -231,9 +228,10 @@ function createRankChart(ctx, data){
         },
         options: {
             animation: false,
+            height: '100%',
+            width: '100%',
             scales: {
                 maintainAspectRatio: false,
-                onResize: handleResize,
                 responsive: true,
                 x: {
                     beginAtZero: true,
@@ -429,8 +427,8 @@ function main() {
     createRankChart(document.getElementById('rankGamesChart').getContext('2d'), j.rankhistory)
 
     document.getElementById('searchInput').addEventListener('keyup', filterTable);
-    // window.addEventListener('resize', adjustChartWidth);
-    // window.addEventListener('load', adjustChartWidth);
+    window.addEventListener('resize', adjustChartWidth);
+    window.addEventListener('load', adjustChartWidth);
     // adjustChartWidth();
     // window.dispatchEvent(new Event('resize'));
 }
