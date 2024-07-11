@@ -429,9 +429,9 @@ function main() {
     createRankChart(document.getElementById('rankGamesChart').getContext('2d'), j.rankhistory)
 
     document.getElementById('searchInput').addEventListener('keyup', filterTable);
-    window.addEventListener('resize', adjustChartWidth);
-    window.addEventListener('load', adjustChartWidth);
-    adjustChartWidth();
+    // window.addEventListener('resize', adjustChartWidth);
+    // window.addEventListener('load', adjustChartWidth);
+    // adjustChartWidth();
     // window.dispatchEvent(new Event('resize'));
 }
 

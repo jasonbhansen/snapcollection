@@ -70,7 +70,6 @@ div#search .container {
 }
 
 div#rankGraph .rank-chart-container {
-    width: 80%;
     min-width: 400px;
     background: #443C82;
 }
@@ -189,7 +188,14 @@ div#cards {
      font-style: italic;
 }
 
+
 @media screen and (min-width: 768px) {
+
+    div#body-container {
+        width: 80%;
+        align-self: center;
+    }
+    
 
     body{
         justify-content: center;
