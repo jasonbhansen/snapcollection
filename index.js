@@ -228,8 +228,6 @@ function createRankChart(ctx, data){
         },
         options: {
             animation: false,
-            height: '100%',
-            width: '100%',
             scales: {
                 maintainAspectRatio: false,
                 responsive: true,
@@ -426,10 +424,10 @@ function main() {
     
     createRankChart(document.getElementById('rankGamesChart').getContext('2d'), j.rankhistory)
 
-    // document.getElementById('searchInput').addEventListener('keyup', filterTable);
-    // window.addEventListener('resize', adjustChartWidth);
-    // window.addEventListener('load', adjustChartWidth);
-    // adjustChartWidth();
+    document.getElementById('searchInput').addEventListener('keyup', filterTable);
+    window.addEventListener('resize', adjustChartWidth);
+    window.addEventListener('load', adjustChartWidth);
+    adjustChartWidth();
     // window.dispatchEvent(new Event('resize'));
 }
 
