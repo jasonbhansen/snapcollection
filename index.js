@@ -149,6 +149,8 @@ function findSmallestDate(data) {
 function adjustChartWidth() {
     const table = document.getElementById('cards-table');
     const chartContainer = document.getElementById('rank-chart-container-id');
+    const chartCanvas = document.getElementById('rankGamesChart');
+    chartCanvas.style.height = '';
     chartContainer.style.width = `${table.offsetWidth}px`;
 }
 
