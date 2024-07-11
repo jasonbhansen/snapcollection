@@ -261,8 +261,10 @@ for (const [key, value] of collection) {
 for (const [key, value] of Object.entries(cards)) {
 
     if (value.is_Token === "0" && !ignore_list.includes(key.toLowerCase()) && Object.keys(value).includes("stats_winrate")) {
-
         let source = getSourceLabel(value.source);
+        if(source === "Pool 4"){
+            console.log(key);
+        }
         if (totals.has(source))
             totals.set(source, totals.get(source) + 1)
         else
