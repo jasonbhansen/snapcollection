@@ -262,7 +262,7 @@ for (const [key, value] of Object.entries(cards)) {
         console.log(value)
         console.log(Object.keys(cards[key.toLowerCase()]).includes("stats_winrate"))
     }
-    if (cards[key.toLowerCase()].is_Token === "0" && !ignore_list.includes(key.toLowerCase() && Object.keys(cards[key.toLowerCase()]).includes("stats_winrate"))) {
+    if (cards[key.toLowerCase()].is_Token === "0" && !ignore_list.includes(key.toLowerCase()) && Object.keys(cards[key.toLowerCase()]).includes("stats_winrate")) {
         
         let source = getSourceLabel(cards[key.toLowerCase()].source);
 
