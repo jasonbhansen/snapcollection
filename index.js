@@ -425,7 +425,7 @@ function main() {
     window.addEventListener('resize', adjustChartWidth);
     window.addEventListener('load', adjustChartWidth);
     adjustChartWidth();
-    window.dispatchEvent(new Event('resize'));
+    // window.dispatchEvent(new Event('resize'));
 }
 
 main();
