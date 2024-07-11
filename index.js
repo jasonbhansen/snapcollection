@@ -226,7 +226,7 @@ function createRankChart(ctx, data){
         options: {
             animation: false,
             scales: {
-                maintainAspectRatio: false,
+                maintainAspectRatio: true,
                 responsive: true,
                 x: {
                     beginAtZero: true,
