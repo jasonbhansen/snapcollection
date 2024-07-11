@@ -1,6 +1,6 @@
 const headers = ['Name', 'Cost', 'Power', 'Description', 'Source', 'Date'];
 
-const ignore_list = ['widowsbite', 'widowskiss', 'wintersoldier']
+const ignore_list = ['widowsbite', 'widowskiss', 'wintersoldier','mysterioillusion']
 
 let sortOrder = {};
 
