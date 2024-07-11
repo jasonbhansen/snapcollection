@@ -18,6 +18,7 @@ table {
     background: #443C82;
     border-radius: 8px;
     overflow: hidden;
+    min-width: 800px;
 }
 
 th,
