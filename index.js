@@ -1,5 +1,7 @@
 const headers = ['Name', 'Cost', 'Power', 'Description', 'Source', 'Date'];
 
+const tokens = ['widowsbite', 'widowskiss', 'wintersoldier']
+
 let sortOrder = {};
 
 function getSourceValue(source) {
@@ -87,7 +89,7 @@ function createTable(cards) {
         tbody.appendChild(row);
     });
 
-    
+
 
     table.appendChild(tbody);
     table.id = 'cards-table';
@@ -253,10 +255,12 @@ for (const [key, value] of collection) {
 }
 
 for (const [key, value] of Object.entries(cards)) {
-    if (totals.has(cards[key.toLowerCase()].source))
-        totals.set(cards[key.toLowerCase()].source, totals.get(cards[key.toLowerCase()].source) + 1)
-    else
-        totals.set(cards[key.toLowerCase()].source, 1)
+    if (!cards[key.toLowerCase()].is_Token) {
+        if (totals.has(cards[key.toLowerCase()].source))
+            totals.set(cards[key.toLowerCase()].source, totals.get(cards[key.toLowerCase()].source) + 1)
+        else
+            totals.set(cards[key.toLowerCase()].source, 1)
+    }
 }
 
 createGaugeChart(document.getElementById('pool3Gauge'), totalsOwned.get('Pool 3 (Collection Level 486-?)'), 'Pool 3 Cards', totals.get('Pool 3 (Collection Level 486-?)'));
