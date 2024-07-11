@@ -201,7 +201,6 @@ function createRankChart(ctx, data){
     
     // Create the chart
     
-    const ctx = 
     new Chart(ctx, {
         type: 'bar',
         data: {
