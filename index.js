@@ -258,19 +258,28 @@ for (const [key, value] of collection) {
 
 }
 
+var all_cards_map = []
+
 for (const [key, value] of Object.entries(cards)) {
 
     if (value.is_Token === "0" && !ignore_list.includes(key.toLowerCase()) && Object.keys(value).includes("stats_winrate")) {
+        all_cards.push(value.name);
         let source = getSourceLabel(value.source);
-        if(source === "Pool 4"){
-            console.log(key);
-        }
-        if (totals.has(source))
+        if (totals.has(source)){ 
             totals.set(source, totals.get(source) + 1)
-        else
+            all_cards_map.get(source).push(value.name)
+        } else {
             totals.set(source, 1)
+            all_cards_map.set(source, [value.name])
+        }
     }
 }
+
+owned_cards.forEach( card => {
+    all_cards_map.get(getSourceLabel(card.source)).filter(x => x != card.name)
+})
+
+print(all_cards_map)
 
 createGaugeChart(document.getElementById('pool3Gauge'), totalsOwned.get('Pool 3'), 'Pool 3 Cards', totals.get('Pool 3'));
 createGaugeChart(document.getElementById('pool4Gauge'), totalsOwned.get('Pool 4'), 'Pool 4 Cards', totals.get('Pool 4'));
