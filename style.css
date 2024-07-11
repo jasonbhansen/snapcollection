@@ -101,7 +101,7 @@ input[type="text"] {
 .chart-container {
     width: 200px;
     min-width: 200px;
-    height: 200px;
+    height: auto;
     min-height: 200px;
     position: relative;
     float: left;
@@ -178,6 +178,8 @@ div#cards {
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
+    position: absolute;
+    bottom: 0;
 }
 
 @media screen and (min-width: 768px) {

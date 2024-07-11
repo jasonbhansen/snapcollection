@@ -291,9 +291,15 @@ function createRankChart(ctx, data){
 
 }
 
-function toggleMore(containerId) {
+function toggleMore(containerId, button) {
     const container = document.getElementById(containerId);
-    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    if (container.style.display === 'none' || container.style.display === '') {
+        container.style.display = 'block';
+        button.innerText = 'Show Less';
+    } else {
+        container.style.display = 'none';
+        button.innerText = 'Show More';
+    }
 }
 
 function populateMissingCards(listId, cards) {
