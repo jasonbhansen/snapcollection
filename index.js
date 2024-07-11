@@ -1,6 +1,6 @@
 const headers = ['Name', 'Cost', 'Power', 'Description', 'Source', 'Date'];
 
-const ignore_list = ['acidarrow','basicarrow','chimichanga','widowsbite', 'widowskiss', 'wintersoldier','mysterioillusion']
+const ignore_list = ['acidarrow', 'basicarrow', 'chimichanga', 'widowsbite', 'widowskiss', 'wintersoldier', 'mysterioillusion']
 
 let sortOrder = {};
 
@@ -203,7 +203,7 @@ var totals = new Map();
 
 for (const [key, value] of Object.entries(j.collection)) {
     var d = new Date()
-    
+
     collection.set(key, {
         name: cards[key.toLowerCase()].name,
         source: cards[key.toLowerCase()].source,
@@ -216,12 +216,14 @@ for (const [key, value] of Object.entries(j.collection)) {
     })
 
     var source = getSourceLabel(cards[key.toLowerCase()].source)
-    if (totalsOwned.has(source))
-        totalsOwned.set(source, totalsOwned.get(source) + 1)
-    else
-        totalsOwned.set(source, 1)
+    if (cards[key.toLowerCase()].is_Token === "0" && !ignore_list.includes(key.toLowerCase()) && Object.keys(cards[key.toLowerCase()]).includes("stats_winrate")) {
+        if (totalsOwned.has(source))
+            totalsOwned.set(source, totalsOwned.get(source) + 1)
+        else
+            totalsOwned.set(source, 1)
+    }
 
-    
+
 }
 
 for (const [key, value] of Object.entries(j.collectionhist)) {
@@ -258,13 +260,9 @@ for (const [key, value] of collection) {
 
 for (const [key, value] of Object.entries(cards)) {
 
-   
     if (value.is_Token === "0" && !ignore_list.includes(key.toLowerCase()) && Object.keys(value).includes("stats_winrate")) {
-        
-        let source = getSourceLabel(value.source);
 
-        if(source === "Pool 5")
-            console.log(key.toLocaleLowerCase())
+        let source = getSourceLabel(value.source);
         if (totals.has(source))
             totals.set(source, totals.get(source) + 1)
         else
