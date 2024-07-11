@@ -375,12 +375,12 @@ function process_cards(){
         all_cards_map.set(source,all_cards_map.get(source).filter(x => x != card.name));
     })
     
-    return {owned_cards, all_cards_map}
+    return {owned_cards, all_cards_map, totalsOwned, totals}
 }
 
 function main() {
 
-    var {owned_cards, all_cards_map} = process_cards();
+    var {owned_cards, all_cards_map, totalsOwned, totals} = process_cards();
     
     console.log(all_cards_map)
     
