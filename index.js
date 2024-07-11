@@ -291,7 +291,7 @@ function createRankChart(ctx, data){
 
 }
 
-export function toggleMore(containerId) {
+function toggleMore(containerId) {
     const container = document.getElementById(containerId);
     container.style.display = container.style.display === 'none' ? 'block' : 'none';
 }
