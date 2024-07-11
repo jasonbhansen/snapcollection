@@ -49,7 +49,7 @@ tr:hover {
 }
 
 
-img#logo_img {
+img#logo {
     height: 250px;
 }
 
@@ -70,9 +70,8 @@ div#search .container {
 }
 
 div#rankGraph .rank-chart-container {
+    width: 80%;
     min-width: 400px;
-    width: 100%;
-    min-height: 400px;
     background: #443C82;
 }
 
@@ -137,7 +136,7 @@ input[type="text"] {
 
 .margin-20 {
     margin-bottom: 20px;
-    /* margin-left: 20px; */
+    margin-left: 20px;
 }
 
 div#search .container {
@@ -190,20 +189,7 @@ div#cards {
      font-style: italic;
 }
 
-div#content-container {
-    align-self: center;
-    padding-left: 20px;
-}
-
-
 @media screen and (min-width: 768px) {
-
-    div#content-container {
-        width: 80%;
-        align-self: center;
-        padding-left: 20px;
-    }
-    
 
     body{
         justify-content: center;
@@ -234,6 +220,7 @@ div#content-container {
     div#rankGraph{
         display: flex;
         justify-content: center;
+
     }
 
 }
