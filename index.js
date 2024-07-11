@@ -107,8 +107,6 @@ function sortTable(table, key, ascending) {
         compare = (a, b) => {
             const valA = parseInt(a.cells[headers.indexOf(key.charAt(0).toUpperCase() + key.slice(1))].getAttribute('value'));
             const valB = parseInt(b.cells[headers.indexOf(key.charAt(0).toUpperCase() + key.slice(1))].getAttribute('value'));
-            console.log(valA)
-            console.log(valB)
             return ascending ? valA - valB : valB - valA;
         };
     } else {
@@ -223,8 +221,7 @@ for (const [key, value] of Object.entries(j.collection)) {
     else
         totalsOwned.set(source, 1)
 
-    if(source === "Pool 5")
-        console.log(key.toLocaleLowerCase())
+    
 }
 
 for (const [key, value] of Object.entries(j.collectionhist)) {
@@ -261,6 +258,8 @@ for (const [key, value] of collection) {
 
 for (const [key, value] of Object.entries(cards)) {
     if (cards[key.toLowerCase()].is_Token === "0" && !ignore_list.includes(key.toLowerCase())) {
+        if(source === "Pool 5")
+            console.log(key.toLocaleLowerCase())
         let source = getSourceLabel(cards[key.toLowerCase()].source);
         if (totals.has(source))
             totals.set(source, totals.get(source) + 1)
