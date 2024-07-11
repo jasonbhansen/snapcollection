@@ -67,10 +67,8 @@ div#logo {
 
 
 div#search .container {
-    width: 400px;
+    width: 200px;
 }
-
-
 
 div#rankGraph .rank-chart-container {
     width: 80%;
@@ -137,6 +135,10 @@ input[type="text"] {
     margin-left: 20px;
 }
 
+div#search .container {
+    margin-bottom:20px;
+}
+
 div#cards {
     display: flex;
     flex-direction: column;
@@ -144,11 +146,16 @@ div#cards {
 }
 
 @media screen and (min-width: 768px) {
-   
-    div#cards {
-        justify-self: center;
+
+    body{
+        justify-content: center;
     }
-    
+
+    div#search .container {
+        width: 400px;
+    }
+   
+
     div#logo {
         display: flex;
         justify-content: center;
