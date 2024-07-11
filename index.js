@@ -278,7 +278,7 @@ owned_cards.forEach( card => {
     all_cards_map.get(getSourceLabel(card.source)).filter(x => x != card.name)
 })
 
-print(all_cards_map)
+console.log(all_cards_map)
 
 createGaugeChart(document.getElementById('pool3Gauge'), totalsOwned.get('Pool 3'), 'Pool 3 Cards', totals.get('Pool 3'));
 createGaugeChart(document.getElementById('pool4Gauge'), totalsOwned.get('Pool 4'), 'Pool 4 Cards', totals.get('Pool 4'));
