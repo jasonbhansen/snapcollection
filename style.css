@@ -1,9 +1,13 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     background-color: #604DA7;
     color: #FFFFFF;
     font-family: 'Arial', sans-serif;
     margin: 0;
-    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -164,19 +168,21 @@ input[type="text"] {
     }
 
     div#logo {
-        justify-content: center;
         display: flex;
+        justify-content: center;
 
     }
 
     div#gauges {
-        justify-content: center;
         display: flex;
+        justify-content: center;
+
     }
 
     div#rankGraph{
-        justify-content: center;
         display: flex;
+        justify-content: center;
+
     }
 }
     
