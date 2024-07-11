@@ -295,10 +295,10 @@ function toggleMore(containerId, button) {
     const container = document.getElementById(containerId);
     if (container.style.display === 'none' || container.style.display === '') {
         container.style.display = 'block';
-        button.innerText = 'Show Less';
+        button.innerText = 'Hide Missing';
     } else {
         container.style.display = 'none';
-        button.innerText = 'Show More';
+        button.innerText = 'Show Missing';
     }
 }
 
