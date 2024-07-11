@@ -87,6 +87,8 @@ function createTable(cards) {
         tbody.appendChild(row);
     });
 
+    
+
     table.appendChild(tbody);
     table.id = 'cards-table';
     sortTable(table, "Name", true);
