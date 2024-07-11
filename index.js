@@ -1,6 +1,6 @@
 const headers = ['Name', 'Cost', 'Power', 'Description', 'Source', 'Date'];
 
-const tokens = ['widowsbite', 'widowskiss', 'wintersoldier']
+const ignore_list = ['widowsbite', 'widowskiss', 'wintersoldier']
 
 let sortOrder = {};
 
@@ -255,7 +255,7 @@ for (const [key, value] of collection) {
 }
 
 for (const [key, value] of Object.entries(cards)) {
-    if (cards[key.toLowerCase()].is_Token === "0") {
+    if (cards[key.toLowerCase()].is_Token === "0" && ignore_list.includes(key.toLowerCase())) {
         if (totals.has(cards[key.toLowerCase()].source))
             totals.set(cards[key.toLowerCase()].source, totals.get(cards[key.toLowerCase()].source) + 1)
         else
