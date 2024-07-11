@@ -195,6 +195,10 @@ function createGaugeChart(ctx, value, label, maxValue) {
     new Chart(ctx, config);
 }
 
+function handleResize(chart){
+    chart.update()
+}
+
 function createRankChart(ctx, data){
     data = data.filter((e, i) => i % 2 == 0);
     const labels = data.map(d => new Date(d.date * 1000).toLocaleDateString());
@@ -228,7 +232,8 @@ function createRankChart(ctx, data){
         options: {
             animation: false,
             scales: {
-                maintainAspectRatio: true,
+                maintainAspectRatio: false,
+                onResize: handleResize,
                 responsive: true,
                 x: {
                     beginAtZero: true,
