@@ -137,13 +137,18 @@ input[type="text"] {
     margin-left: 20px;
 }
 
-@media screen and (min-width: 768px) {
-    div#cards {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-    }
+div#cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
 
+@media screen and (min-width: 768px) {
+   
+    div#cards {
+        justify-self: center;
+    }
+    
     div#logo {
         display: flex;
         justify-content: center;
@@ -161,6 +166,7 @@ input[type="text"] {
         justify-content: center;
 
     }
+
 }
     
 
