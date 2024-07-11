@@ -103,8 +103,8 @@ input[type="text"] {
     min-width: 200px;
     height: auto;
     min-height: 200px;
-    float: left;
     margin-right: 20px;
+    text-align: center;
 }
 
 .canvas-container {
@@ -156,6 +156,8 @@ div#cards {
 .more-container {
     display: none;
     margin-top: 20px;
+    text-align: left;
+    padding-left: 25px;
 }
 
 .more-container h3 {
@@ -176,13 +178,15 @@ div#cards {
 }
 
 .show-more-button {
-    background-color: #FFD700;
-    color: #2E2965;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
+     color: white;
+     border: none;
+     border-radius: 5px;
+     font-size: 1em;
+     cursor: pointer;
+     background-color: transparent;
+     background-repeat: no-repeat;
+     border: none;
+     font-style: italic;
 }
 
 @media screen and (min-width: 768px) {
