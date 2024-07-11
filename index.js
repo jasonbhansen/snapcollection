@@ -193,206 +193,218 @@ function createGaugeChart(ctx, value, label, maxValue) {
     new Chart(ctx, config);
 }
 
-
-document.getElementById('searchInput').addEventListener('keyup', filterTable);
-
-
-var collection = new Map();
-var totalsOwned = new Map();
-var totals = new Map();
-
-for (const [key, value] of Object.entries(j.collection)) {
-    var d = new Date()
-
-    collection.set(key, {
-        name: cards[key.toLowerCase()].name,
-        source: cards[key.toLowerCase()].source,
-        cost: cards[key.toLowerCase()].cost,
-        power: cards[key.toLowerCase()].power,
-        description: cards[key.toLowerCase()].description,
-        dateStr: d.toLocaleDateString(),
-        date: Math.trunc(d),
-        updated: false
-    })
-
-    var source = getSourceLabel(cards[key.toLowerCase()].source)
-    if (cards[key.toLowerCase()].is_Token === "0" && !ignore_list.includes(key.toLowerCase()) && Object.keys(cards[key.toLowerCase()]).includes("stats_winrate")) {
-        if (totalsOwned.has(source))
-            totalsOwned.set(source, totalsOwned.get(source) + 1)
-        else
-            totalsOwned.set(source, 1)
-    }
-
-
-}
-
-for (const [key, value] of Object.entries(j.collectionhist)) {
-
-    var d = new Date(findSmallestDate(j.collectionhist[key]) * 1000)
-
-    collection.set(key, {
-        name: cards[key.toLowerCase()].name,
-        source: cards[key.toLowerCase()].source,
-        cost: cards[key.toLowerCase()].cost,
-        power: cards[key.toLowerCase()].power,
-        description: cards[key.toLowerCase()].description,
-        dateStr: d.toLocaleDateString(),
-        date: Math.trunc(d),
-        updated: true
-    }
-    )
-}
-
-var owned_cards = []
-for (const [key, value] of collection) {
-    owned_cards.push({
-        name: value.name,
-        dateStr: value.dateStr,
-        date: value.date,
-        cost: value.cost,
-        power: value.power,
-        description: value.description,
-        source: value.source,
-        updated: value.updated
-    })
-
-}
-
-var all_cards_map = new Map();
-
-for (const [key, value] of Object.entries(cards)) {
-
-    if (value.is_Token === "0" && !ignore_list.includes(key.toLowerCase()) && Object.keys(value).includes("stats_winrate")) {
-        let source = getSourceLabel(value.source);
-        if (totals.has(source)){ 
-            totals.set(source, totals.get(source) + 1)
-            all_cards_map.get(source).push(value.name)
-        } else {
-            totals.set(source, 1)
-            all_cards_map.set(source, [value.name])
-        }
-    }
-}
-
-owned_cards.forEach( card => {
-    var source = getSourceLabel(card.source);
-    all_cards_map.set(source,all_cards_map.get(source).filter(x => x != card.name));
-})
-
-console.log(all_cards_map)
-
-createGaugeChart(document.getElementById('pool3Gauge'), totalsOwned.get('Pool 3'), 'Pool 3 Cards', totals.get('Pool 3'));
-createGaugeChart(document.getElementById('pool4Gauge'), totalsOwned.get('Pool 4'), 'Pool 4 Cards', totals.get('Pool 4'));
-createGaugeChart(document.getElementById('pool5Gauge'), totalsOwned.get('Pool 5'), 'Pool 5 Cards', totals.get('Pool 5'));
-
-document.getElementById('pool3Percent').innerText = `${Math.trunc(100 * totalsOwned.get('Pool 3') / totals.get('Pool 3'))}%`;
-document.getElementById('pool4Percent').innerText = `${Math.trunc(100 * totalsOwned.get('Pool 4') / totals.get('Pool 4'))}%`;
-document.getElementById('pool5Percent').innerText = `${Math.trunc(100 * totalsOwned.get('Pool 5') / totals.get('Pool 5'))}%`;
-
-
-const table = createTable(owned_cards);
-document.getElementById('cards').getElementsByClassName("container")[0].appendChild(table);
-
-
-window.addEventListener('resize', adjustChartWidth);
-window.addEventListener('load', adjustChartWidth);
-
-adjustChartWidth();
-
-
-var data = j.rankhistory;
-data = data.filter((e, i) => i % 2 == 0);
-const labels = data.map(d => new Date(d.date * 1000).toLocaleDateString());
-const rankData = data.map(d => d.Rank);
-const gamesPlayedData = data.map(d => d.GamesPlayedInSeason);
-
-// Create the chart
-
-const ctx = document.getElementById('rankGamesChart').getContext('2d');
-const chart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: labels,
-        datasets: [{
-            type: 'line',
-            label: 'Rank',
-            data: rankData,
-            borderColor: '#FFD700',
-            backgroundColor: 'rgba(255, 215, 0, 0.2)',
-            borderWidth: 2,
-            pointRadius: 1,
-            yAxisID: 'y-axis-rank'
-        }, {
-            type: 'bar',
-            label: 'Games Played In Season',
-            data: gamesPlayedData,
-            backgroundColor: '#1E90FF',
-            borderWidth: 1,
-            yAxisID: 'y-axis-games'
-        }]
-    },
-    options: {
-        animation: false,
-        scales: {
-            maintainAspectRatio: false,
-            responsive: true,
-            x: {
-                beginAtZero: true,
-                ticks: {
-                    font: {
-                        size: 14
-                    },
-                    color: '#FFFFFF'
-                }
-            },
-            'y-axis-rank': {
-                type: 'linear',
-                position: 'left',
-                beginAtZero: true,
-                ticks: {
-                    font: {
-                        size: 14
-                    },
-                    color: '#FFFFFF'
-                },
-                title: {
-                    display: true,
-                    text: 'Rank',
-                    font: {
-                        size: 16
-                    },
-                    color: '#FFFFFF'
-                }
-            },
-            'y-axis-games': {
-                type: 'linear',
-                position: 'right',
-                beginAtZero: true,
-                ticks: {
-                    font: {
-                        size: 14
-                    },
-                    color: '#FFFFFF'
-                },
-                title: {
-                    display: true,
-                    text: 'Games Played In Season',
-                    font: {
-                        size: 16
-                    },
-                    color: '#FFFFFF'
-                }
-            }
+function createRankChart(ctx, data){
+    data = data.filter((e, i) => i % 2 == 0);
+    const labels = data.map(d => new Date(d.date * 1000).toLocaleDateString());
+    const rankData = data.map(d => d.Rank);
+    const gamesPlayedData = data.map(d => d.GamesPlayedInSeason);
+    
+    // Create the chart
+    
+    const ctx = 
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                type: 'line',
+                label: 'Rank',
+                data: rankData,
+                borderColor: '#FFD700',
+                backgroundColor: 'rgba(255, 215, 0, 0.2)',
+                borderWidth: 2,
+                pointRadius: 1,
+                yAxisID: 'y-axis-rank'
+            }, {
+                type: 'bar',
+                label: 'Games Played In Season',
+                data: gamesPlayedData,
+                backgroundColor: '#1E90FF',
+                borderWidth: 1,
+                yAxisID: 'y-axis-games'
+            }]
         },
-        plugins: {
-            legend: {
-                labels: {
-                    font: {
-                        size: 16
+        options: {
+            animation: false,
+            scales: {
+                maintainAspectRatio: false,
+                responsive: true,
+                x: {
+                    beginAtZero: true,
+                    ticks: {
+                        font: {
+                            size: 14
+                        },
+                        color: '#FFFFFF'
+                    }
+                },
+                'y-axis-rank': {
+                    type: 'linear',
+                    position: 'left',
+                    beginAtZero: true,
+                    ticks: {
+                        font: {
+                            size: 14
+                        },
+                        color: '#FFFFFF'
                     },
-                    color: '#FFFFFF'
+                    title: {
+                        display: true,
+                        text: 'Rank',
+                        font: {
+                            size: 16
+                        },
+                        color: '#FFFFFF'
+                    }
+                },
+                'y-axis-games': {
+                    type: 'linear',
+                    position: 'right',
+                    beginAtZero: true,
+                    ticks: {
+                        font: {
+                            size: 14
+                        },
+                        color: '#FFFFFF'
+                    },
+                    title: {
+                        display: true,
+                        text: 'Games Played In Season',
+                        font: {
+                            size: 16
+                        },
+                        color: '#FFFFFF'
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        font: {
+                            size: 16
+                        },
+                        color: '#FFFFFF'
+                    }
                 }
             }
         }
+    });
+
+}
+
+function process_cards(){
+    
+    var collection = new Map();
+    var totalsOwned = new Map();
+    var totals = new Map();
+    
+    for (const [key, value] of Object.entries(j.collection)) {
+        var d = new Date()
+    
+        collection.set(key, {
+            name: cards[key.toLowerCase()].name,
+            source: cards[key.toLowerCase()].source,
+            cost: cards[key.toLowerCase()].cost,
+            power: cards[key.toLowerCase()].power,
+            description: cards[key.toLowerCase()].description,
+            dateStr: d.toLocaleDateString(),
+            date: Math.trunc(d),
+            updated: false
+        })
+    
+        var source = getSourceLabel(cards[key.toLowerCase()].source)
+        if (cards[key.toLowerCase()].is_Token === "0" && !ignore_list.includes(key.toLowerCase()) && Object.keys(cards[key.toLowerCase()]).includes("stats_winrate")) {
+            if (totalsOwned.has(source))
+                totalsOwned.set(source, totalsOwned.get(source) + 1)
+            else
+                totalsOwned.set(source, 1)
+        }
+    
+    
     }
-});
+    
+    for (const [key, value] of Object.entries(j.collectionhist)) {
+    
+        var d = new Date(findSmallestDate(j.collectionhist[key]) * 1000)
+    
+        collection.set(key, {
+            name: cards[key.toLowerCase()].name,
+            source: cards[key.toLowerCase()].source,
+            cost: cards[key.toLowerCase()].cost,
+            power: cards[key.toLowerCase()].power,
+            description: cards[key.toLowerCase()].description,
+            dateStr: d.toLocaleDateString(),
+            date: Math.trunc(d),
+            updated: true
+        }
+        )
+    }
+    
+    var owned_cards = []
+    for (const [key, value] of collection) {
+        owned_cards.push({
+            name: value.name,
+            dateStr: value.dateStr,
+            date: value.date,
+            cost: value.cost,
+            power: value.power,
+            description: value.description,
+            source: value.source,
+            updated: value.updated
+        })
+    
+    }
+    
+    var all_cards_map = new Map();
+    
+    for (const [key, value] of Object.entries(cards)) {
+    
+        if (value.is_Token === "0" && !ignore_list.includes(key.toLowerCase()) && Object.keys(value).includes("stats_winrate")) {
+            let source = getSourceLabel(value.source);
+            if (totals.has(source)){ 
+                totals.set(source, totals.get(source) + 1)
+                all_cards_map.get(source).push(value.name)
+            } else {
+                totals.set(source, 1)
+                all_cards_map.set(source, [value.name])
+            }
+        }
+    }
+    
+    owned_cards.forEach( card => {
+        var source = getSourceLabel(card.source);
+        all_cards_map.set(source,all_cards_map.get(source).filter(x => x != card.name));
+    })
+    
+    return {owned_cards, all_cards_map}
+}
+
+function main() {
+
+    var {owned_cards, all_cards_map} = process_cards();
+    
+    console.log(all_cards_map)
+    
+    createGaugeChart(document.getElementById('pool3Gauge'), totalsOwned.get('Pool 3'), 'Pool 3 Cards', totals.get('Pool 3'));
+    createGaugeChart(document.getElementById('pool4Gauge'), totalsOwned.get('Pool 4'), 'Pool 4 Cards', totals.get('Pool 4'));
+    createGaugeChart(document.getElementById('pool5Gauge'), totalsOwned.get('Pool 5'), 'Pool 5 Cards', totals.get('Pool 5'));
+    
+    document.getElementById('pool3Percent').innerText = `${Math.trunc(100 * totalsOwned.get('Pool 3') / totals.get('Pool 3'))}%`;
+    document.getElementById('pool4Percent').innerText = `${Math.trunc(100 * totalsOwned.get('Pool 4') / totals.get('Pool 4'))}%`;
+    document.getElementById('pool5Percent').innerText = `${Math.trunc(100 * totalsOwned.get('Pool 5') / totals.get('Pool 5'))}%`;
+    
+    
+    const table = createTable(owned_cards);
+    document.getElementById('cards').getElementsByClassName("container")[0].appendChild(table);
+    
+    createRankChart(document.getElementById('rankGamesChart').getContext('2d'), j.rankhistory)
+
+    document.getElementById('searchInput').addEventListener('keyup', filterTable);
+    window.addEventListener('resize', adjustChartWidth);
+    window.addEventListener('load', adjustChartWidth);
+    adjustChartWidth();
+}
+
+main();
+
+
