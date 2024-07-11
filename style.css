@@ -13,7 +13,6 @@ body {
 }
 
 table {
-    width: 80%;
     border-collapse: collapse;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background: #443C82;
@@ -157,6 +156,11 @@ div#cards {
 
     div#search .container {
         width: 400px;
+    }
+
+    div#cards {
+        display: flex;
+        justify-content: center;
     }
    
 
