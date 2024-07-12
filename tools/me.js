@@ -5,7 +5,7 @@ const j ={
         "twitchID": "",
         "mszID": "",
         "mszPremium": "0",
-        "Rank": "67",
+        "Rank": "68",
         "snap_nick": "Frzn#24664",
         "CollectionScore": "0",
         "countryCode": "US",
@@ -398,6 +398,12 @@ const j ={
             "ArtVariantDefId": "",
             "Split": "0"
         },
+        "ShangChi": {
+            "rarity": "Legendary",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "ShangChi_03",
+            "Split": "0"
+        },
         "Blade": {
             "rarity": "Legendary",
             "SurfaceEffectDefId": "",
@@ -480,12 +486,6 @@ const j ={
             "rarity": "Epic",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "Hood_02",
-            "Split": "0"
-        },
-        "ShangChi": {
-            "rarity": "Epic",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "ShangChi_03",
             "Split": "0"
         },
         "Medusa": {
@@ -848,6 +848,12 @@ const j ={
             "ArtVariantDefId": "",
             "Split": "0"
         },
+        "Nebula": {
+            "rarity": "Rare",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "",
+            "Split": "0"
+        },
         "Yellowjacket": {
             "rarity": "Rare",
             "SurfaceEffectDefId": "",
@@ -1065,12 +1071,6 @@ const j ={
             "Split": "0"
         },
         "Juggernaut": {
-            "rarity": "Uncommon",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "",
-            "Split": "0"
-        },
-        "Nebula": {
             "rarity": "Uncommon",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "",
@@ -4612,6 +4612,15 @@ const j ={
                 "cardID": "4f1f428d-015d-466d-bf19-281df2dcdfbb"
             },
             {
+                "date": "1719530520",
+                "rarity": "Legendary",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "ShangChi_03",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "4f1f428d-015d-466d-bf19-281df2dcdfbb"
+            },
+            {
                 "date": "1714859383",
                 "rarity": "Epic",
                 "SurfaceEffectDefId": "",
@@ -6523,6 +6532,15 @@ const j ={
                 "Split": "0",
                 "rewardLevel": "0",
                 "cardID": "aa058a4f-b6cc-44ca-a81f-38ef653f178d"
+            },
+            {
+                "date": "1720566759",
+                "rarity": "Rare",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "aa058a4f-b6cc-44ca-a81f-38ef653f178d"
             }
         ],
         "Yellowjacket": [
@@ -7695,6 +7713,21 @@ const j ={
             "date": "1720731600",
             "Rank": "67",
             "GamesPlayedInSeason": "57"
+        },
+        {
+            "date": "1720735200",
+            "Rank": "66",
+            "GamesPlayedInSeason": "59"
+        },
+        {
+            "date": "1720738800",
+            "Rank": "68",
+            "GamesPlayedInSeason": "62"
+        },
+        {
+            "date": "1720756800",
+            "Rank": "68",
+            "GamesPlayedInSeason": "65"
         }
     ],
     "colrankhistory": []
