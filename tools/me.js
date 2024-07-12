@@ -5,7 +5,7 @@ const j ={
         "twitchID": "",
         "mszID": "",
         "mszPremium": "0",
-        "Rank": "68",
+        "Rank": "69",
         "snap_nick": "Frzn#24664",
         "CollectionScore": "0",
         "countryCode": "US",
@@ -7728,6 +7728,11 @@ const j ={
             "date": "1720756800",
             "Rank": "68",
             "GamesPlayedInSeason": "65"
+        },
+        {
+            "date": "1720803600",
+            "Rank": "69",
+            "GamesPlayedInSeason": "69"
         }
     ],
     "colrankhistory": []
