@@ -79,8 +79,8 @@ function createTable(cards) {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${card.name}</td>
-            <td>${card.cost}</td>
-            <td>${card.power}</td>
+            <td value='${card.cost}'>${card.cost}</td>
+            <td value='${card.power}'>${card.power}</td>
             <td>${card.description}</td>
             <td value='${getSourceValue(card.source)}'>${getSourceLabel(card.source)}</td>
             <td value='${card.date}'>${card.dateStr}</td>
