@@ -102,7 +102,7 @@ function sortTable(table, key, ascending) {
     const rows = Array.from(tbody.rows);
     let compare;
 
-    if (key === 'date' || key === "source") {
+    if (key === 'date' || key === "source" || key === "power") {
         console.log("here")
         compare = (a, b) => {
             const valA = parseInt(a.cells[headers.indexOf(key.charAt(0).toUpperCase() + key.slice(1))].getAttribute('value'));
