@@ -986,6 +986,12 @@ const j ={
             "ArtVariantDefId": "",
             "Split": "0"
         },
+        "Darkhawk": {
+            "rarity": "Uncommon",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "",
+            "Split": "0"
+        },
         "Gilgamesh": {
             "rarity": "Uncommon",
             "SurfaceEffectDefId": "",
@@ -1184,12 +1190,6 @@ const j ={
             "ArtVariantDefId": "",
             "Split": "0"
         },
-        "Darkhawk": {
-            "rarity": "Common",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "",
-            "Split": "0"
-        },
         "AdamWarlock": {
             "rarity": "Common",
             "SurfaceEffectDefId": "",
@@ -1214,6 +1214,12 @@ const j ={
             "ArtVariantDefId": "",
             "Split": "0"
         },
+        "Gladiator": {
+            "rarity": "Common",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "",
+            "Split": "0"
+        },
         "BlackPanther": {
             "rarity": "Common",
             "SurfaceEffectDefId": "",
@@ -1232,6 +1238,12 @@ const j ={
             "ArtVariantDefId": "",
             "Split": "0"
         },
+        "Copycat": {
+            "rarity": "Common",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "",
+            "Split": "0"
+        },
         "ColleenWing": {
             "rarity": "Common",
             "SurfaceEffectDefId": "",
@@ -1239,6 +1251,12 @@ const j ={
             "Split": "0"
         },
         "Electro": {
+            "rarity": "Common",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "",
+            "Split": "0"
+        },
+        "Thanos": {
             "rarity": "Common",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "",
@@ -2393,6 +2411,17 @@ const j ={
                 "cardID": "ec29bf29-31fa-4b33-8031-68d70d91290a"
             }
         ],
+        "Darkhawk": [
+            {
+                "date": "1721747700",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "0d7b03a8-169a-464e-bc6a-b4c44e9708a7"
+            }
+        ],
         "IronFist": [
             {
                 "date": "1714086674",
@@ -3141,6 +3170,15 @@ const j ={
                 "cardID": "1ce5d7bc-7e57-4d9d-b0e9-4044d36a3f6a"
             },
             {
+                "date": "1721869821",
+                "rarity": "Rare",
+                "SurfaceEffectDefId": "PrismFoil",
+                "ArtVariantDefId": "",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "1ce5d7bc-7e57-4d9d-b0e9-4044d36a3f6a"
+            },
+            {
                 "date": "1715877321",
                 "rarity": "Rare",
                 "SurfaceEffectDefId": "",
@@ -3372,6 +3410,15 @@ const j ={
             {
                 "date": "1721608612",
                 "rarity": "Legendary",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "Deadpool_20",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "d3d921ee-c084-4c7c-882f-561add04dd8c"
+            },
+            {
+                "date": "1721747593",
+                "rarity": "UltraLegendary",
                 "SurfaceEffectDefId": "",
                 "ArtVariantDefId": "Deadpool_20",
                 "Split": "0",
@@ -3632,6 +3679,15 @@ const j ={
                 "Split": "1",
                 "rewardLevel": "0",
                 "cardID": "693c6cf3-31fe-45f9-b982-0f1e38102018"
+            },
+            {
+                "date": "1721608567",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "Foil",
+                "ArtVariantDefId": "Odin_03",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "77b9193d-ad21-448f-8874-a20fddcc46f3"
             }
         ],
         "Sentry": [
@@ -3947,6 +4003,15 @@ const j ={
                 "Split": "0",
                 "rewardLevel": "0",
                 "cardID": "2b3bde28-d0a8-4d1e-af48-d3954377861a"
+            },
+            {
+                "date": "1721747661",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "Cosmo_07",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "b9048755-056d-482a-99f8-bd0bac6af3ae"
             }
         ],
         "Deathlok": [
@@ -8537,8 +8602,33 @@ const j ={
         },
         {
             "date": "1721700000",
+            "Rank": "74",
+            "GamesPlayedInSeason": "235"
+        },
+        {
+            "date": "1721710800",
             "Rank": "73",
-            "GamesPlayedInSeason": "234"
+            "GamesPlayedInSeason": "237"
+        },
+        {
+            "date": "1721833200",
+            "Rank": "73",
+            "GamesPlayedInSeason": "237"
+        },
+        {
+            "date": "1721840400",
+            "Rank": "73",
+            "GamesPlayedInSeason": "237"
+        },
+        {
+            "date": "1721844000",
+            "Rank": "73",
+            "GamesPlayedInSeason": "237"
+        },
+        {
+            "date": "1721872800",
+            "Rank": "73",
+            "GamesPlayedInSeason": "237"
         }
     ],
     "colrankhistory": []
