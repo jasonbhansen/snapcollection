@@ -5,7 +5,7 @@ const j ={
         "twitchID": "",
         "mszID": "",
         "mszPremium": "0",
-        "Rank": "73",
+        "Rank": "74",
         "snap_nick": "Frzn#24664",
         "CollectionScore": "0",
         "countryCode": "US",
@@ -206,6 +206,12 @@ const j ={
             "ArtVariantDefId": "",
             "Split": "1"
         },
+        "HighEvolutionary": {
+            "rarity": "Infinity",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "HighEvolutionary_04",
+            "Split": "1"
+        },
         "Storm": {
             "rarity": "Infinity",
             "SurfaceEffectDefId": "",
@@ -284,6 +290,12 @@ const j ={
             "ArtVariantDefId": "",
             "Split": "1"
         },
+        "Magik": {
+            "rarity": "Infinity",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "Magik_02",
+            "Split": "0"
+        },
         "Abomination": {
             "rarity": "Infinity",
             "SurfaceEffectDefId": "",
@@ -326,6 +338,12 @@ const j ={
             "ArtVariantDefId": "MrNegative_06",
             "Split": "1"
         },
+        "ArnimZola": {
+            "rarity": "Infinity",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "ArnimZola_04",
+            "Split": "0"
+        },
         "Shocker": {
             "rarity": "Infinity",
             "SurfaceEffectDefId": "PrismFoil",
@@ -350,28 +368,16 @@ const j ={
             "ArtVariantDefId": "",
             "Split": "0"
         },
-        "HighEvolutionary": {
+        "MrSinister": {
             "rarity": "UltraLegendary",
             "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "HighEvolutionary_04",
-            "Split": "0"
-        },
-        "Magik": {
-            "rarity": "UltraLegendary",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "Magik_02",
+            "ArtVariantDefId": "MrSinister_12",
             "Split": "0"
         },
         "Angela": {
             "rarity": "UltraLegendary",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "",
-            "Split": "0"
-        },
-        "ArnimZola": {
-            "rarity": "UltraLegendary",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "ArnimZola_04",
             "Split": "0"
         },
         "Patriot": {
@@ -416,6 +422,12 @@ const j ={
             "ArtVariantDefId": "Taskmaster_11",
             "Split": "0"
         },
+        "Cyclops": {
+            "rarity": "Legendary",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "Cyclops_02",
+            "Split": "0"
+        },
         "Gamora": {
             "rarity": "Legendary",
             "SurfaceEffectDefId": "",
@@ -426,12 +438,6 @@ const j ={
             "rarity": "Legendary",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "Blade_12",
-            "Split": "0"
-        },
-        "MrSinister": {
-            "rarity": "Legendary",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "MrSinister_12",
             "Split": "0"
         },
         "WhiteQueen": {
@@ -510,12 +516,6 @@ const j ={
             "rarity": "Epic",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "",
-            "Split": "0"
-        },
-        "Cyclops": {
-            "rarity": "Epic",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "Cyclops_02",
             "Split": "0"
         },
         "Hood": {
@@ -926,6 +926,12 @@ const j ={
             "ArtVariantDefId": "",
             "Split": "0"
         },
+        "Loki": {
+            "rarity": "Rare",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "",
+            "Split": "0"
+        },
         "GrandMaster": {
             "rarity": "Rare",
             "SurfaceEffectDefId": "",
@@ -1047,6 +1053,12 @@ const j ={
             "Split": "0"
         },
         "EbonyMaw": {
+            "rarity": "Uncommon",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "",
+            "Split": "0"
+        },
+        "Gladiator": {
             "rarity": "Uncommon",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "",
@@ -1214,13 +1226,13 @@ const j ={
             "ArtVariantDefId": "",
             "Split": "0"
         },
-        "Gladiator": {
+        "BlackPanther": {
             "rarity": "Common",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "",
             "Split": "0"
         },
-        "BlackPanther": {
+        "OmegaRed": {
             "rarity": "Common",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "",
@@ -1363,6 +1375,15 @@ const j ={
             {
                 "date": "1720552168",
                 "rarity": "UltraLegendary",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "ArnimZola_04",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "d6603268-963d-46a3-82e1-f8b29babe58f"
+            },
+            {
+                "date": "1722172281",
+                "rarity": "Infinity",
                 "SurfaceEffectDefId": "",
                 "ArtVariantDefId": "ArnimZola_04",
                 "Split": "0",
@@ -2317,6 +2338,15 @@ const j ={
             {
                 "date": "1721542334",
                 "rarity": "UltraLegendary",
+                "SurfaceEffectDefId": "Foil",
+                "ArtVariantDefId": "",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "80dfd4b3-a055-4218-a5df-d751c42008a0"
+            },
+            {
+                "date": "1722224849",
+                "rarity": "Infinity",
                 "SurfaceEffectDefId": "Foil",
                 "ArtVariantDefId": "",
                 "Split": "0",
@@ -3424,6 +3454,15 @@ const j ={
                 "Split": "0",
                 "rewardLevel": "0",
                 "cardID": "d3d921ee-c084-4c7c-882f-561add04dd8c"
+            },
+            {
+                "date": "1722137009",
+                "rarity": "Infinity",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "Deadpool_20",
+                "Split": "1",
+                "rewardLevel": "0",
+                "cardID": "d3d921ee-c084-4c7c-882f-561add04dd8c"
             }
         ],
         "Debrii": [
@@ -3777,6 +3816,15 @@ const j ={
             {
                 "date": "1721611549",
                 "rarity": "Uncommon",
+                "SurfaceEffectDefId": "Foil",
+                "ArtVariantDefId": "ShangChi_03",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "983f79a3-2f52-41e8-b91e-628b3533d801"
+            },
+            {
+                "date": "1722227970",
+                "rarity": "Rare",
                 "SurfaceEffectDefId": "Foil",
                 "ArtVariantDefId": "ShangChi_03",
                 "Split": "0",
@@ -4523,6 +4571,15 @@ const j ={
                 "cardID": "d2cd41d7-1928-4347-a4d9-edfdc7afb45b"
             },
             {
+                "date": "1722348565",
+                "rarity": "UltraLegendary",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "Infinaut_06",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "d2cd41d7-1928-4347-a4d9-edfdc7afb45b"
+            },
+            {
                 "date": "1714849933",
                 "rarity": "Infinity",
                 "SurfaceEffectDefId": "",
@@ -4574,6 +4631,15 @@ const j ={
             {
                 "date": "1720417083",
                 "rarity": "Uncommon",
+                "SurfaceEffectDefId": "Foil",
+                "ArtVariantDefId": "",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "405070fa-da0c-4880-8301-c267fb5ed092"
+            },
+            {
+                "date": "1722126169",
+                "rarity": "Rare",
                 "SurfaceEffectDefId": "Foil",
                 "ArtVariantDefId": "",
                 "Split": "0",
@@ -4878,6 +4944,80 @@ const j ={
                 "cardID": "a59a0799-c792-4d56-9645-be85ddb55af7"
             }
         ],
+        "HighEvolutionary": [
+            {
+                "date": "1722194100",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "Foil",
+                "ArtVariantDefId": "HighEvolutionary_04",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "46062081-61d4-4678-a602-e61ca1e74043"
+            },
+            {
+                "date": "1718733696",
+                "rarity": "Epic",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "HighEvolutionary_04",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "6dca5bec-ab58-4855-9b36-5a100bb90174"
+            },
+            {
+                "date": "1718733696",
+                "rarity": "Rare",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "HighEvolutionary_04",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "6dca5bec-ab58-4855-9b36-5a100bb90174"
+            },
+            {
+                "date": "1719809061",
+                "rarity": "Legendary",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "HighEvolutionary_04",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "6dca5bec-ab58-4855-9b36-5a100bb90174"
+            },
+            {
+                "date": "1719972602",
+                "rarity": "UltraLegendary",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "HighEvolutionary_04",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "6dca5bec-ab58-4855-9b36-5a100bb90174"
+            },
+            {
+                "date": "1720897596",
+                "rarity": "Infinity",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "HighEvolutionary_04",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "6dca5bec-ab58-4855-9b36-5a100bb90174"
+            },
+            {
+                "date": "1721936709",
+                "rarity": "Infinity",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "HighEvolutionary_04",
+                "Split": "1",
+                "rewardLevel": "0",
+                "cardID": "a08f1d8d-e27a-4cf8-b078-a65b2ae60c78"
+            },
+            {
+                "date": "1719096951",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "ae928267-1ea7-47bf-94f0-f181d10c80d6"
+            }
+        ],
         "Magneto": [
             {
                 "date": "1721157931",
@@ -4945,6 +5085,15 @@ const j ={
             {
                 "date": "1720321310",
                 "rarity": "Epic",
+                "SurfaceEffectDefId": "PrismFoil",
+                "ArtVariantDefId": "Magneto_05",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "e47b58f4-de87-482f-85d1-1a146fc4b989"
+            },
+            {
+                "date": "1722172307",
+                "rarity": "Legendary",
                 "SurfaceEffectDefId": "PrismFoil",
                 "ArtVariantDefId": "Magneto_05",
                 "Split": "0",
@@ -5144,6 +5293,15 @@ const j ={
                 "cardID": "6c86e6e9-c7e1-4675-9feb-78020491896a"
             },
             {
+                "date": "1722107006",
+                "rarity": "UltraLegendary",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "MrSinister_12",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "6c86e6e9-c7e1-4675-9feb-78020491896a"
+            },
+            {
                 "date": "1714919956",
                 "rarity": "Uncommon",
                 "SurfaceEffectDefId": "",
@@ -5240,6 +5398,15 @@ const j ={
             {
                 "date": "1721251245",
                 "rarity": "Epic",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "Cyclops_02",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "4a3053a3-0563-478d-a01e-bec661ef64d8"
+            },
+            {
+                "date": "1722348580",
+                "rarity": "Legendary",
                 "SurfaceEffectDefId": "",
                 "ArtVariantDefId": "Cyclops_02",
                 "Split": "0",
@@ -5728,6 +5895,15 @@ const j ={
                 "cardID": "68200e0c-1473-4598-a9cc-db691b562e6b"
             },
             {
+                "date": "1722006637",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "PrismFoil",
+                "ArtVariantDefId": "Venom_05",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "845990af-854a-4ca2-ab8e-166401fa436d"
+            },
+            {
                 "date": "1717776449",
                 "rarity": "Epic",
                 "SurfaceEffectDefId": "PrismFoil",
@@ -5751,6 +5927,15 @@ const j ={
                 "SurfaceEffectDefId": "PrismFoil",
                 "ArtVariantDefId": "Venom_05",
                 "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "98bcc00b-e9d8-448f-b89e-1380605b6df7"
+            },
+            {
+                "date": "1722006616",
+                "rarity": "Infinity",
+                "SurfaceEffectDefId": "PrismFoil",
+                "ArtVariantDefId": "Venom_05",
+                "Split": "1",
                 "rewardLevel": "0",
                 "cardID": "98bcc00b-e9d8-448f-b89e-1380605b6df7"
             },
@@ -5869,53 +6054,6 @@ const j ={
                 "Split": "0",
                 "rewardLevel": "0",
                 "cardID": "9ca670db-e3ca-4413-b08e-a2eae562c0ad"
-            }
-        ],
-        "HighEvolutionary": [
-            {
-                "date": "1718733696",
-                "rarity": "Epic",
-                "SurfaceEffectDefId": "",
-                "ArtVariantDefId": "HighEvolutionary_04",
-                "Split": "0",
-                "rewardLevel": "0",
-                "cardID": "6dca5bec-ab58-4855-9b36-5a100bb90174"
-            },
-            {
-                "date": "1718733696",
-                "rarity": "Rare",
-                "SurfaceEffectDefId": "",
-                "ArtVariantDefId": "HighEvolutionary_04",
-                "Split": "0",
-                "rewardLevel": "0",
-                "cardID": "6dca5bec-ab58-4855-9b36-5a100bb90174"
-            },
-            {
-                "date": "1719809061",
-                "rarity": "Legendary",
-                "SurfaceEffectDefId": "",
-                "ArtVariantDefId": "HighEvolutionary_04",
-                "Split": "0",
-                "rewardLevel": "0",
-                "cardID": "6dca5bec-ab58-4855-9b36-5a100bb90174"
-            },
-            {
-                "date": "1719972602",
-                "rarity": "UltraLegendary",
-                "SurfaceEffectDefId": "",
-                "ArtVariantDefId": "HighEvolutionary_04",
-                "Split": "0",
-                "rewardLevel": "0",
-                "cardID": "6dca5bec-ab58-4855-9b36-5a100bb90174"
-            },
-            {
-                "date": "1719096951",
-                "rarity": "Uncommon",
-                "SurfaceEffectDefId": "",
-                "ArtVariantDefId": "",
-                "Split": "0",
-                "rewardLevel": "0",
-                "cardID": "ae928267-1ea7-47bf-94f0-f181d10c80d6"
             }
         ],
         "Medusa": [
@@ -6148,6 +6286,17 @@ const j ={
                 "Split": "0",
                 "rewardLevel": "0",
                 "cardID": "f15d473f-37ec-4071-921e-c544eb8c6a7c"
+            }
+        ],
+        "Gladiator": [
+            {
+                "date": "1722021030",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "71148423-7403-428a-87e2-21caed88cc32"
             }
         ],
         "Okoye": [
@@ -6916,6 +7065,15 @@ const j ={
                 "cardID": "96a89ea2-aa79-431f-9aef-e4a391118a7b"
             },
             {
+                "date": "1722280899",
+                "rarity": "Legendary",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "Angela_10",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "96a89ea2-aa79-431f-9aef-e4a391118a7b"
+            },
+            {
                 "date": "1714939708",
                 "rarity": "Legendary",
                 "SurfaceEffectDefId": "",
@@ -7012,6 +7170,15 @@ const j ={
             {
                 "date": "1721488043",
                 "rarity": "UltraLegendary",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "Magik_02",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "986d6b41-8751-4deb-bc60-8a5d25e3a623"
+            },
+            {
+                "date": "1722280914",
+                "rarity": "Infinity",
                 "SurfaceEffectDefId": "",
                 "ArtVariantDefId": "Magik_02",
                 "Split": "0",
@@ -7844,6 +8011,17 @@ const j ={
                 "cardID": "eb967c3b-3129-4d44-ba48-2e8758b6662d"
             }
         ],
+        "Loki": [
+            {
+                "date": "1722133433",
+                "rarity": "Rare",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "eb9b5282-c6a9-4137-919e-60e21002f9e1"
+            }
+        ],
         "GrandMaster": [
             {
                 "date": "1719106964",
@@ -8629,6 +8807,31 @@ const j ={
             "date": "1721872800",
             "Rank": "73",
             "GamesPlayedInSeason": "237"
+        },
+        {
+            "date": "1721883600",
+            "Rank": "73",
+            "GamesPlayedInSeason": "237"
+        },
+        {
+            "date": "1721934000",
+            "Rank": "73",
+            "GamesPlayedInSeason": "237"
+        },
+        {
+            "date": "1721941200",
+            "Rank": "73",
+            "GamesPlayedInSeason": "237"
+        },
+        {
+            "date": "1721944800",
+            "Rank": "73",
+            "GamesPlayedInSeason": "237"
+        },
+        {
+            "date": "1722348000",
+            "Rank": "74",
+            "GamesPlayedInSeason": "243"
         }
     ],
     "colrankhistory": []
