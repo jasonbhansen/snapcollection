@@ -266,6 +266,12 @@ const j ={
             "ArtVariantDefId": "",
             "Split": "1"
         },
+        "ArnimZola": {
+            "rarity": "Infinity",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "ArnimZola_04",
+            "Split": "1"
+        },
         "Cable": {
             "rarity": "Infinity",
             "SurfaceEffectDefId": "",
@@ -294,7 +300,7 @@ const j ={
             "rarity": "Infinity",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "Magik_02",
-            "Split": "0"
+            "Split": "1"
         },
         "Abomination": {
             "rarity": "Infinity",
@@ -337,12 +343,6 @@ const j ={
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "MrNegative_06",
             "Split": "1"
-        },
-        "ArnimZola": {
-            "rarity": "Infinity",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "ArnimZola_04",
-            "Split": "0"
         },
         "Shocker": {
             "rarity": "Infinity",
@@ -1226,6 +1226,12 @@ const j ={
             "ArtVariantDefId": "",
             "Split": "0"
         },
+        "ProximaMidnight": {
+            "rarity": "Common",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "",
+            "Split": "0"
+        },
         "BlackPanther": {
             "rarity": "Common",
             "SurfaceEffectDefId": "",
@@ -1233,6 +1239,12 @@ const j ={
             "Split": "0"
         },
         "OmegaRed": {
+            "rarity": "Common",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "",
+            "Split": "0"
+        },
+        "HopeSummers": {
             "rarity": "Common",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "",
@@ -1344,6 +1356,15 @@ const j ={
                 "Split": "0",
                 "rewardLevel": "0",
                 "cardID": "4861397e-2c0e-4241-bc3c-e49946fc79c0"
+            },
+            {
+                "date": "1722373053",
+                "rarity": "Infinity",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "ArnimZola_04",
+                "Split": "1",
+                "rewardLevel": "0",
+                "cardID": "84a199dd-a472-421b-b8f9-9a9f90be2eb2"
             },
             {
                 "date": "1718615155",
@@ -3409,6 +3430,15 @@ const j ={
                 "Split": "0",
                 "rewardLevel": "0",
                 "cardID": "536edec8-7d67-4d33-9ac0-1525afba8ebb"
+            },
+            {
+                "date": "1722137009",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "PrismFoil",
+                "ArtVariantDefId": "Deadpool_20",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "9e2c5af2-b83e-44c3-8ded-83344ac67644"
             },
             {
                 "date": "1714854107",
@@ -7186,6 +7216,15 @@ const j ={
                 "cardID": "986d6b41-8751-4deb-bc60-8a5d25e3a623"
             },
             {
+                "date": "1722373045",
+                "rarity": "Infinity",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "Magik_02",
+                "Split": "1",
+                "rewardLevel": "0",
+                "cardID": "c0535db7-f3c6-4e77-b6fd-47ad18a8f918"
+            },
+            {
                 "date": "1721157910",
                 "rarity": "Uncommon",
                 "SurfaceEffectDefId": "",
@@ -8832,6 +8871,11 @@ const j ={
             "date": "1722348000",
             "Rank": "74",
             "GamesPlayedInSeason": "243"
+        },
+        {
+            "date": "1722369600",
+            "Rank": "74",
+            "GamesPlayedInSeason": "247"
         }
     ],
     "colrankhistory": []
