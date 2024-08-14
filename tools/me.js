@@ -122,6 +122,12 @@ const j = {
             "ArtVariantDefId": "",
             "Split": "1"
         },
+        "Hobgoblin": {
+            "rarity": "Infinity",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "Hobgoblin_03",
+            "Split": "0"
+        },
         "JeffTheBabyLandShark": {
             "rarity": "Infinity",
             "SurfaceEffectDefId": "",
@@ -410,12 +416,6 @@ const j = {
             "ArtVariantDefId": "Blink_07",
             "Split": "0"
         },
-        "Hobgoblin": {
-            "rarity": "UltraLegendary",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "Hobgoblin_03",
-            "Split": "0"
-        },
         "RedGuardian": {
             "rarity": "UltraLegendary",
             "SurfaceEffectDefId": "",
@@ -537,6 +537,12 @@ const j = {
             "Split": "0"
         },
         "HumanTorch": {
+            "rarity": "Epic",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "",
+            "Split": "0"
+        },
+        "Sandman": {
             "rarity": "Epic",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "",
@@ -687,12 +693,6 @@ const j = {
             "Split": "0"
         },
         "Hawkeye": {
-            "rarity": "Rare",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "",
-            "Split": "0"
-        },
-        "Sandman": {
             "rarity": "Rare",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "",
@@ -1244,6 +1244,12 @@ const j = {
             "ArtVariantDefId": "",
             "Split": "0"
         },
+        "Nocturne": {
+            "rarity": "Uncommon",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "",
+            "Split": "0"
+        },
         "Brood": {
             "rarity": "Uncommon",
             "SurfaceEffectDefId": "",
@@ -1395,12 +1401,6 @@ const j = {
             "Split": "0"
         },
         "Pixie": {
-            "rarity": "Common",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "",
-            "Split": "0"
-        },
-        "Nocturne": {
             "rarity": "Common",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "",
@@ -1721,7 +1721,7 @@ const j = {
                 "cardID": "012b0e79-cbb0-42a5-aceb-4c6d2ec38825"
             },
             {
-                "date": "1714969476",
+                "date": "1723580453",
                 "rarity": "Infinity",
                 "SurfaceEffectDefId": "",
                 "ArtVariantDefId": "",
@@ -3354,6 +3354,15 @@ const j = {
                 "cardID": "7019884c-b5bc-4c6d-bed6-2884279a0ed2"
             },
             {
+                "date": "1721074530",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "Storm_11",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "c8c95d70-c432-4fe9-8ad2-79f9a554d9f9"
+            },
+            {
                 "date": "1717077067",
                 "rarity": "Legendary",
                 "SurfaceEffectDefId": "",
@@ -3469,6 +3478,15 @@ const j = {
             }
         ],
         "Sandman": [
+            {
+                "date": "1715738433",
+                "rarity": "Epic",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "1c307144-9a17-4c76-85fc-e248a2982613"
+            },
             {
                 "date": "1715738433",
                 "rarity": "Rare",
@@ -3967,6 +3985,15 @@ const j = {
             {
                 "date": "1719809155",
                 "rarity": "UltraLegendary",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "Hobgoblin_03",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "2321c31a-fea7-46ec-83c6-71c15633bb73"
+            },
+            {
+                "date": "1720060013",
+                "rarity": "Infinity",
                 "SurfaceEffectDefId": "",
                 "ArtVariantDefId": "Hobgoblin_03",
                 "Split": "0",
@@ -5071,6 +5098,15 @@ const j = {
                 "Split": "0",
                 "rewardLevel": "0",
                 "cardID": "4137ed28-87a6-43c7-94f5-b4ea5be80f90"
+            },
+            {
+                "date": "1722622200",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "Elektra_07",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "8eaa747f-84a4-4a0a-83a3-ef4f9906362d"
             }
         ],
         "MultipleMan": [
@@ -5159,6 +5195,15 @@ const j = {
             }
         ],
         "Beast": [
+            {
+                "date": "1721157853",
+                "rarity": "Rare",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "Beast_05",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "4321744a-8891-4caf-9b99-f2388b40ec24"
+            },
             {
                 "date": "1721157853",
                 "rarity": "Uncommon",
@@ -6386,6 +6431,53 @@ const j = {
                 "cardID": "e432f046-9a30-438e-8d34-242cfeef39d0"
             }
         ],
+        "ProfessorX": [
+            {
+                "date": "1721874305",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "ProfessorX_03",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "64dec83c-5118-4e72-aedd-202ed3aa4264"
+            },
+            {
+                "date": "1718762123",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "ProfessorX_07",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "880aa79a-c62b-485c-b075-93d2d194e7eb"
+            },
+            {
+                "date": "1718762115",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "ProfessorX_10",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "c1c4b23a-a018-4992-96af-24f4d0ee3073"
+            },
+            {
+                "date": "1720295258",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "ProfessorX_06",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "d42953f5-5721-4829-89c7-7c084eb7bfe1"
+            },
+            {
+                "date": "1718557688",
+                "rarity": "Rare",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "fb92e60a-e302-412e-9a49-2a074859892f"
+            }
+        ],
         "Swarm": [
             {
                 "date": "1714858546",
@@ -7455,44 +7547,6 @@ const j = {
                 "cardID": "c7d3c33e-99bd-4a7d-b802-0896f1392988"
             }
         ],
-        "ProfessorX": [
-            {
-                "date": "1718762123",
-                "rarity": "Uncommon",
-                "SurfaceEffectDefId": "",
-                "ArtVariantDefId": "ProfessorX_07",
-                "Split": "0",
-                "rewardLevel": "0",
-                "cardID": "880aa79a-c62b-485c-b075-93d2d194e7eb"
-            },
-            {
-                "date": "1718762115",
-                "rarity": "Uncommon",
-                "SurfaceEffectDefId": "",
-                "ArtVariantDefId": "ProfessorX_10",
-                "Split": "0",
-                "rewardLevel": "0",
-                "cardID": "c1c4b23a-a018-4992-96af-24f4d0ee3073"
-            },
-            {
-                "date": "1720295258",
-                "rarity": "Uncommon",
-                "SurfaceEffectDefId": "",
-                "ArtVariantDefId": "ProfessorX_06",
-                "Split": "0",
-                "rewardLevel": "0",
-                "cardID": "d42953f5-5721-4829-89c7-7c084eb7bfe1"
-            },
-            {
-                "date": "1718557688",
-                "rarity": "Rare",
-                "SurfaceEffectDefId": "",
-                "ArtVariantDefId": "",
-                "Split": "0",
-                "rewardLevel": "0",
-                "cardID": "fb92e60a-e302-412e-9a49-2a074859892f"
-            }
-        ],
         "Ghost": [
             {
                 "date": "1717621320",
@@ -8400,6 +8454,17 @@ const j = {
                 "Split": "0",
                 "rewardLevel": "0",
                 "cardID": "eb9b5282-c6a9-4137-919e-60e21002f9e1"
+            }
+        ],
+        "Nocturne": [
+            {
+                "date": "1723580225",
+                "rarity": "Uncommon",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "f0a6c3be-e9fd-4683-9bea-4523028d98c8"
             }
         ],
         "GrandMaster": [
@@ -9368,6 +9433,16 @@ const j = {
             "date": "1723579200",
             "Rank": "73",
             "GamesPlayedInSeason": "116"
+        },
+        {
+            "date": "1723590000",
+            "Rank": "73",
+            "GamesPlayedInSeason": "124"
+        },
+        {
+            "date": "1723608000",
+            "Rank": "73",
+            "GamesPlayedInSeason": "125"
         }
     ],
     "colrankhistory": []
