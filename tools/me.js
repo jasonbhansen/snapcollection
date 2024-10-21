@@ -5,7 +5,7 @@ const j = {
         "twitchID": "",
         "mszID": "",
         "mszPremium": "0",
-        "Rank": "74",
+        "Rank": "78",
         "snap_nick": "Frzn#24664",
         "CollectionScore": "0",
         "countryCode": "US",
@@ -506,6 +506,12 @@ const j = {
             "ArtVariantDefId": "Giganto_04",
             "Split": "0"
         },
+        "Mystique": {
+            "rarity": "UltraLegendary",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "Mystique_11",
+            "Split": "0"
+        },
         "Valkyrie": {
             "rarity": "UltraLegendary",
             "SurfaceEffectDefId": "",
@@ -513,6 +519,12 @@ const j = {
             "Split": "0"
         },
         "Rogue": {
+            "rarity": "UltraLegendary",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "",
+            "Split": "0"
+        },
+        "CassandraNova": {
             "rarity": "UltraLegendary",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "",
@@ -585,12 +597,6 @@ const j = {
             "Split": "0"
         },
         "MistyKnight": {
-            "rarity": "Legendary",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "",
-            "Split": "0"
-        },
-        "Mystique": {
             "rarity": "Legendary",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "",
@@ -752,12 +758,6 @@ const j = {
             "ArtVariantDefId": "SymbioteSpiderMan_02",
             "Split": "0"
         },
-        "CassandraNova": {
-            "rarity": "Epic",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "",
-            "Split": "0"
-        },
         "Loki": {
             "rarity": "Epic",
             "SurfaceEffectDefId": "",
@@ -885,6 +885,12 @@ const j = {
             "Split": "0"
         },
         "Namor": {
+            "rarity": "Rare",
+            "SurfaceEffectDefId": "",
+            "ArtVariantDefId": "",
+            "Split": "0"
+        },
+        "AgentVenom": {
             "rarity": "Rare",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "",
@@ -1293,12 +1299,6 @@ const j = {
             "Split": "0"
         },
         "AbsorbingMan": {
-            "rarity": "Uncommon",
-            "SurfaceEffectDefId": "",
-            "ArtVariantDefId": "",
-            "Split": "0"
-        },
-        "AgentVenom": {
             "rarity": "Uncommon",
             "SurfaceEffectDefId": "",
             "ArtVariantDefId": "",
@@ -4795,6 +4795,15 @@ const j = {
                 "cardID": "214ae39b-e8e2-45b3-8004-37dcb7ad65e4"
             },
             {
+                "date": "1729356208",
+                "rarity": "UltraLegendary",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "Mystique_11",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "5d3dfc97-a025-45c0-810f-933552557486"
+            },
+            {
                 "date": "1720060134",
                 "rarity": "Legendary",
                 "SurfaceEffectDefId": "",
@@ -7137,6 +7146,15 @@ const j = {
             }
         ],
         "AgentVenom": [
+            {
+                "date": "1727819515",
+                "rarity": "Rare",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "5084a330-1366-4621-af8c-0ec82fbc8462"
+            },
             {
                 "date": "1727819515",
                 "rarity": "Uncommon",
@@ -9626,6 +9644,15 @@ const j = {
                 "Split": "0",
                 "rewardLevel": "0",
                 "cardID": "e865719c-3fb1-4ce9-b97f-0b4966eb0115"
+            },
+            {
+                "date": "1723660876",
+                "rarity": "UltraLegendary",
+                "SurfaceEffectDefId": "",
+                "ArtVariantDefId": "",
+                "Split": "0",
+                "rewardLevel": "0",
+                "cardID": "e865719c-3fb1-4ce9-b97f-0b4966eb0115"
             }
         ],
         "Supergiant": [
@@ -10797,8 +10824,28 @@ const j = {
         },
         {
             "date": "1729458000",
-            "Rank": "74",
-            "GamesPlayedInSeason": "174"
+            "Rank": "75",
+            "GamesPlayedInSeason": "176"
+        },
+        {
+            "date": "1729461600",
+            "Rank": "76",
+            "GamesPlayedInSeason": "189"
+        },
+        {
+            "date": "1729476000",
+            "Rank": "76",
+            "GamesPlayedInSeason": "197"
+        },
+        {
+            "date": "1729515600",
+            "Rank": "76",
+            "GamesPlayedInSeason": "198"
+        },
+        {
+            "date": "1729522800",
+            "Rank": "78",
+            "GamesPlayedInSeason": "200"
         }
     ],
     "colrankhistory": []
